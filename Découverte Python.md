@@ -1,8 +1,3 @@
----
-
-
----
-
 <h1 id="atelier-découverte-python">Atelier découverte Python</h1>
 <p>Lors de cet atelier, tu vas apprendre à programmer la carte <strong>BBC Micro:bit</strong> à l’aide du langage de programmation <strong>Python</strong>.<br>
 Tu vas devoir surmonter un maximum de <strong>défis</strong> pour gagner tes <strong>badges</strong> de développeur Python :</p>
