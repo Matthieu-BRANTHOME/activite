@@ -1,8 +1,3 @@
----
-
-
----
-
 <h1 id="atelier-découverte-python">Atelier découverte Python</h1>
 <p>L’objectif de cet atelier est de découvrir le langage <strong>Python</strong> à travers la programmation d’une carte <strong>BBC Micro:bit</strong>.</p>
 <ul>
