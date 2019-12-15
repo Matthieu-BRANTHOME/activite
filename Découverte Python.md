@@ -1,24 +1,70 @@
+---
+
+
+---
+
 <h1 id="atelier-découverte-python">Atelier découverte Python</h1>
-<p>L’objectif de cet atelier est de découvrir le langage <strong>Python</strong> à travers la programmation d’une carte <strong>BBC Micro:bit</strong>.</p>
+<p>Lors de cet atelier, tu vas apprendre à programmer la carte <strong>BBC Micro:bit</strong> à l’aide du langage de programmation <strong>Python</strong>.<br>
+Tu vas devoir surmonter un maximum de <strong>défis</strong> pour gagner tes <strong>badges</strong> de développeur Python :</p>
+
+<table>
+<thead>
+<tr>
+<th><img src="https://docs.google.com/uc?id=1mxdm7U4UIaIGgUOoun9pMSYMnB011HcJ" alt=""></th>
+<th><img src="https://docs.google.com/uc?id=18HiRKTA-m0i2rHz9fLgW6anVe9DVhEzr" alt=""></th>
+<th><img src="https://docs.google.com/uc?id=16c0XypJpKssvt1ibHtbL_xHa2j8DCevA" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3 défis relevés</td>
+<td>6 défis relevés</td>
+<td>9 défis relevés</td>
+</tr>
+</tbody>
+</table><p>Pour y arriver, tu disposes:</p>
 <ul>
-<li>Vous trouverez d’abord un <strong>mémo</strong> récapitulant les principales fonctionnalités du langage Python.</li>
-<li>Vous devrez ensuite relever une liste de <strong>défis</strong> en programmant la carte micro:bit. A vous de jouer!</li>
+<li>d’une <strong>carte</strong> micro:bit et de son câble USB</li>
 </ul>
-<h2 id="mémo-python">Mémo Python</h2>
-<h3 id="généralités">Généralités</h3>
+<p><img src="https://docs.google.com/uc?id=11Me-Sfi0Nzcr3sPgfg-4r9cN6gqxOoeF" alt=""><img src="https://docs.google.com/uc?id=1q_2OtzdZw47tGmzcM8U0k4qPHO-tWVAO" alt=""></p>
 <ul>
-<li>Un programme  Python est un texte qui permet de “commander” un ordinateur. Il est <strong>exécuté</strong> par un <strong>interpréteur</strong> situé dans la carte micro:bit. Le texte ne doit comporter <strong>aucune erreur</strong>, sinon l’interpréteur signale un problème lors de l’execution.</li>
+<li>de l’<strong>environnement de développement</strong> Mu</li>
+</ul>
+<p><img src="https://docs.google.com/uc?id=1rBgO5Vv6Ipov51FQncRIIMywJ_fyWY6I" alt=""></p>
+<ul>
+<li>d’un <strong>guide de démarrage</strong>, te permettant de prendre en main l’environnement</li>
+<li>d’un <strong>mémo</strong> récapitulant les <strong>principales fonctionnalités</strong>  du langage Python</li>
+<li>d’une <strong>liste de défis</strong> à relever</li>
+</ul>
+<p>A toi de jouer! Bonne chance!</p>
+<h2 id="guide-de-démarrage">Guide de démarrage</h2>
+<ul>
+<li>Un programme  Python est un texte qui permet de “commander” un ordinateur (la carte micro:bit est un petit ordinateur). Dans notre cas, ce programme est <strong>exécuté</strong> par un <strong>interpréteur</strong> situé dans la carte. Le texte ne doit comporter <strong>aucune erreur</strong>, sinon l’interpréteur signale un problème et l’exécution s’arrête.</li>
 <li>Les lignes commençant par <code>#</code> ne sont pas prises en compte par l’interpréteur, elles permettent de faire des <strong>commentaires</strong>, de donner des explications.<br>
 <em>Exemple:</em></li>
 </ul>
 <pre class=" language-python"><code class="prism  language-python"><span class="token comment">#Cette ligne ne sera pas prise en compte </span>
 </code></pre>
 <ul>
-<li><code>print()</code> permet d’écrire dans la <strong>console</strong>. C’est une sorte de journal dans lequel l’interpréteur peut écrire pendant l’exécution du programme. Ce journal peut être utile au programmateur pour voir ce qu’il s’est passé lors de l’exécution.<br>
-<em>Exemple:</em></li>
+<li><code>print()</code> permet d’écrire dans la <strong>console</strong>. C’est une sorte de journal dans lequel l’interpréteur peut écrire pendant l’exécution du programme. Ce journal peut être utile au programmeur pour voir ce qu’il s’est passé lors de l’exécution. Dans l’environnement de développement Mu,  il est possible d’accéder à ce qui a été écrit dans la console en cliquant sur le bouton “REPL”<br>
+<img src="https://docs.google.com/uc?id=1aGNmo8mjkL7Cv1RSey_7gwB4jtTMNTKP" alt=""></li>
 </ul>
+<p><em>Exemple:</em><br>
+dans le programme:</p>
 <pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Bonjour!"</span><span class="token punctuation">)</span>
 </code></pre>
+<p>dans la console:<br>
+<mark>Photo à ajouter</mark></p>
+<ul>
+<li>Les programmes qui utilisent la carte micro:bit doivent <strong>absolument commencer par</strong>:</li>
+</ul>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">from</span> microbit <span class="token keyword">import</span> <span class="token operator">*</span>
+</code></pre>
+<ul>
+<li>Pour <strong>téléverser</strong> un programme que tu as écrit dans Mu vers la carte micro:bit, il faut cliquer sur le bouton “Flasher”<br>
+<img src="https://docs.google.com/uc?id=16K_p-_F61BJJDsDU0nlLp0raK51ba5K9" alt=""></li>
+</ul>
+<h2 id="mémo-python">Mémo Python</h2>
 <h3 id="variables">Variables</h3>
 <p>Permet de garder en mémoire des valeurs au cours de l’exécution</p>
 <p><em>Exemple:</em></p>
@@ -28,15 +74,13 @@ var1 <span class="token operator">=</span> <span class="token number">2</span>
 var2 <span class="token operator">=</span> <span class="token number">3</span>
 <span class="token comment">#Ajoute 1 à la variable var2</span>
 var2 <span class="token operator">=</span> var2 <span class="token operator">+</span><span class="token number">1</span>
-<span class="token comment">#Calcul une somme puis l'affecte à la variable var3</span>
-var3 <span class="token operator">=</span> var1<span class="token operator">+</span>var2
-<span class="token comment">#Calcul un produit puis l'affecte à la variable var4</span>
-var4 <span class="token operator">=</span> var3<span class="token operator">*</span>var1
-<span class="token comment">#Ecrit dans la console la valeur de la variable var4</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>var4<span class="token punctuation">)</span>
+<span class="token comment">#Calcul un produit puis l'affecte à la variable var3</span>
+var3 <span class="token operator">=</span> var2<span class="token operator">*</span>var1
+<span class="token comment">#Ecrit dans la console la valeur de la variable var3</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>var3<span class="token punctuation">)</span>
 </code></pre>
 <p><em>Dans la console:</em></p>
-<pre><code>12
+<pre><code>8
 </code></pre>
 <h3 id="conditionnelle">Conditionnelle</h3>
 <p>Permet d’exécuter différentes instructions selon des conditions</p>
@@ -116,22 +160,33 @@ Plus dans la boucle
 </code></pre>
 <p><em>Exemple:</em></p>
 <pre class=" language-python"><code class="prism  language-python"><span class="token comment">#La définition de la fonction se fait avant son utilisation</span>
+<span class="token comment">#Ici, on définie une fonction que calcul une puissance connaissant la base et l'exposant</span>
 <span class="token keyword">def</span> <span class="token function">puissance</span><span class="token punctuation">(</span>base<span class="token punctuation">,</span>exposant<span class="token punctuation">)</span><span class="token punctuation">:</span>
 	resultat <span class="token operator">=</span> base
 	<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>exposant<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
 		resultat <span class="token operator">=</span> resultat <span class="token operator">*</span> base
 	<span class="token keyword">print</span><span class="token punctuation">(</span>resultat<span class="token punctuation">)</span>
 <span class="token comment">#On peut ensuite utiliser la fonction plus loin dans le programme</span>
-puissance<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span>
-puissance<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span>
+puissance<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token comment">#Calcul 2 exposant 3</span>
+puissance<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span> <span class="token comment">#Calcul 10 exposant 4</span>
 </code></pre>
 <p><em>Dans la console</em>:</p>
 <pre><code>8
 10000
 </code></pre>
 <h2 id="défis-1-le-smiley">Défis 1: Le smiley</h2>
-<p>|</p>
-<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+<h3 id="défis">Défis</h3>
+<blockquote>
+<p>Afficher un smiley sur l’écran de la carte micro:bit</p>
+</blockquote>
+<p><img src="https://docs.google.com/uc?id=1JFzH6CJBEGwXW3QAYFm8C5e7aFfX_3HA" alt=""></p>
+<h3 id="aide">Aide:</h3>
+<p>Tu disposes de la fonction:</p>
+<pre class=" language-python"><code class="prism  language-python">display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span><span class="token operator">&lt;</span>num_colonne<span class="token operator">&gt;</span><span class="token punctuation">,</span><span class="token operator">&lt;</span>num_ligne<span class="token operator">&gt;</span><span class="token punctuation">,</span><span class="token operator">&lt;</span>intentisité<span class="token operator">&gt;</span><span class="token punctuation">)</span>
 </code></pre>
-<p><img src="https://docs.google.com/uc?id=1qLTLoWg2SzmAfVda-EX8U4G9FzQW1TFz" alt="enter image description here"></p>
+<p>pour allumer la LED de la colonne <code>&lt;num_colonne&gt;</code> (nombre entre 0 et 4) et de la ligne <code>&lt;num_ligne&gt;</code> (nombre entre 0 et 4) avec une intensité <code>&lt;intensité&gt;</code> (nombre entre 0 et 9)</p>
+<h2 id="défis-2-la-pluie">Défis 2: La pluie</h2>
+<blockquote>
+<p>Présenter une goute d’eau</p>
+</blockquote>
 
