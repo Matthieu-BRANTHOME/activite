@@ -1,20 +1,52 @@
-<h1 id="atelier-découverte-python">Atelier découverte Python</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Découverte Python</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#atelier-découverte-python">Atelier découverte Python</a>
+<ul>
+<li><a href="#guide-de-démarrage">Guide de démarrage</a></li>
+<li><a href="#mémo-python">Mémo Python</a></li>
+<li><a href="#défi-1-le-smiley">Défi 1: Le smiley</a></li>
+<li><a href="#défis-2-la-pluie">Défis 2: La pluie</a></li>
+<li><a href="#défis-3-lalarme-incendie">Défis 3: L’alarme incendie</a></li>
+<li><a href="#défis-4-pierre-feuille-ciseaux">Défis 4: Pierre-feuille-ciseaux</a></li>
+<li><a href="#défis-5-le-labyrinthe">Défis 5: Le labyrinthe</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="atelier-découverte-python">Atelier découverte Python</h1>
 <p>Lors de cet atelier, tu vas apprendre à programmer la carte <strong>BBC Micro:bit</strong> à l’aide du langage de programmation <strong>Python</strong>.<br>
 Tu vas devoir surmonter un maximum de <strong>défis</strong> pour gagner tes <strong>badges</strong> de développeur Python :</p>
 
 <table>
 <thead>
 <tr>
-<th><img src="https://docs.google.com/uc?id=1mxdm7U4UIaIGgUOoun9pMSYMnB011HcJ" alt=""></th>
-<th><img src="https://docs.google.com/uc?id=18HiRKTA-m0i2rHz9fLgW6anVe9DVhEzr" alt=""></th>
-<th><img src="https://docs.google.com/uc?id=16c0XypJpKssvt1ibHtbL_xHa2j8DCevA" alt=""></th>
+<th align="center"><img src="https://docs.google.com/uc?id=1mxdm7U4UIaIGgUOoun9pMSYMnB011HcJ" alt=""></th>
+<th align="center"><img src="https://docs.google.com/uc?id=18HiRKTA-m0i2rHz9fLgW6anVe9DVhEzr" alt=""></th>
+<th align="center"><img src="https://docs.google.com/uc?id=16c0XypJpKssvt1ibHtbL_xHa2j8DCevA" alt=""></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>3 défis relevés</td>
-<td>6 défis relevés</td>
-<td>9 défis relevés</td>
+<td align="center"><strong>Débutant</strong></td>
+<td align="center"><strong>Confirmé</strong></td>
+<td align="center"><strong>Expert</strong></td>
 </tr>
 </tbody>
 </table><p>Pour y arriver, tu disposes:</p>
@@ -33,33 +65,36 @@ Tu vas devoir surmonter un maximum de <strong>défis</strong> pour gagner tes <s
 </ul>
 <p>A toi de jouer! Bonne chance!</p>
 <h2 id="guide-de-démarrage">Guide de démarrage</h2>
+<p>Retrouve ici tout ce dont tu as besoin pour débuter:</p>
 <ul>
-<li>Un programme  Python est un texte qui permet de “commander” un ordinateur (la carte micro:bit est un petit ordinateur). Dans notre cas, ce programme est <strong>exécuté</strong> par un <strong>interpréteur</strong> situé dans la carte. Le texte ne doit comporter <strong>aucune erreur</strong>, sinon l’interpréteur signale un problème et l’exécution s’arrête.</li>
-<li>Les lignes commençant par <code>#</code> ne sont pas prises en compte par l’interpréteur, elles permettent de faire des <strong>commentaires</strong>, de donner des explications.<br>
+<li>Un programme  Python est un texte qui permet de “commander” un ordinateur (la carte micro:bit est un petit ordinateur). Dans notre cas, ce programme est <strong>exécuté</strong> par un <strong>interpréteur</strong> situé dans la carte. Le texte ne doit comporter <strong>aucune erreur</strong>, sinon l’interpréteur signale un problème et l’exécution s’arrête. Les erreurs sont signalées dans la console (voir plus loin).</li>
+<li>Les lignes commençant par <code>#</code> ne sont pas prises en compte par l’interpréteur, elles permettent de faire des <strong>commentaires</strong>, de donner des explications sur le programme pour faciliter sa compréhension les lecteurs humains.<br>
 <em>Exemple:</em></li>
 </ul>
 <pre class=" language-python"><code class="prism  language-python"><span class="token comment">#Cette ligne ne sera pas prise en compte </span>
 </code></pre>
 <ul>
-<li><code>print()</code> permet d’écrire dans la <strong>console</strong>. C’est une sorte de journal dans lequel l’interpréteur peut écrire pendant l’exécution du programme. Ce journal peut être utile au programmeur pour voir ce qu’il s’est passé lors de l’exécution. Dans l’environnement de développement Mu,  il est possible d’accéder à ce qui a été écrit dans la console en cliquant sur le bouton “REPL”<br>
+<li>La fonction <code>print()</code> permet d’écrire dans la <strong>console</strong>. C’est une sorte de journal dans lequel l’interpréteur peut écrire pendant l’exécution du programme. Ce journal peut être utile au programmeur pour voir ce qu’il s’est passé lors de l’exécution. Dans l’environnement de développement Mu,  il est possible d’accéder à ce qui a été écrit dans la console en cliquant sur le bouton “REPL”:<br>
 <img src="https://docs.google.com/uc?id=1aGNmo8mjkL7Cv1RSey_7gwB4jtTMNTKP" alt=""></li>
 </ul>
 <p><em>Exemple:</em><br>
 dans le programme:</p>
-<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Bonjour!"</span><span class="token punctuation">)</span>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Bonjour"</span><span class="token punctuation">)</span>
 </code></pre>
 <p>dans la console:<br>
-<mark>Photo à ajouter</mark></p>
+<img src="https://docs.google.com/uc?id=1Z1OHw4ed2i6RryKQwa7ZyXMRvyyik4eW" alt=""></p>
 <ul>
 <li>Les programmes qui utilisent la carte micro:bit doivent <strong>absolument commencer par</strong>:</li>
 </ul>
 <pre class=" language-python"><code class="prism  language-python"><span class="token keyword">from</span> microbit <span class="token keyword">import</span> <span class="token operator">*</span>
 </code></pre>
 <ul>
-<li>Pour <strong>téléverser</strong> un programme que tu as écrit dans Mu vers la carte micro:bit, il faut cliquer sur le bouton “Flasher”<br>
+<li>Pour <strong>téléverser</strong> un programme que tu as écrit dans l’environnement de développement Mu vers la carte micro:bit, il faut cliquer sur le bouton “Flasher”:<br>
 <img src="https://docs.google.com/uc?id=16K_p-_F61BJJDsDU0nlLp0raK51ba5K9" alt=""></li>
+<li>Pour <strong>relancer</strong> un programme chargé dans la carte, il suffit d’appuyer sur le bouton à l’arrière de la carte.</li>
 </ul>
 <h2 id="mémo-python">Mémo Python</h2>
+<p>Retrouve ici un récapitulatif des principales fonctionnalités du langage Python:</p>
 <h3 id="variables">Variables</h3>
 <p>Permet de garder en mémoire des valeurs au cours de l’exécution</p>
 <p><em>Exemple:</em></p>
@@ -75,7 +110,7 @@ var3 <span class="token operator">=</span> var2<span class="token operator">*</s
 <span class="token keyword">print</span><span class="token punctuation">(</span>var3<span class="token punctuation">)</span>
 </code></pre>
 <p><em>Dans la console:</em></p>
-<pre><code>8
+<pre><code>&gt;&gt;&gt; 8
 </code></pre>
 <h3 id="conditionnelle">Conditionnelle</h3>
 <p>Permet d’exécuter différentes instructions selon des conditions</p>
@@ -98,8 +133,8 @@ var3 <span class="token operator">=</span> var2<span class="token operator">*</s
 <span class="token keyword">else</span> <span class="token punctuation">:</span>
 	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Plus grand que 10"</span><span class="token punctuation">)</span>
 </code></pre>
-<p>Dans la console:</p>
-<pre><code>Entre 0 et 10
+<p><em>Dans la console:</em></p>
+<pre><code>&gt;&gt;&gt; Entre 0 et 10
 </code></pre>
 <p><em>Remarque :</em><br>
 Le nombre de  “cas” est variable. On peut utiliser  un <code>if</code> seul, le couple <code>if</code>/<code>else</code>  ou autant de <code>elif</code> que l’on souhaite :  <code>if</code>/<code>elif</code>/…/<code>elif</code>/<code>else</code></p>
@@ -118,7 +153,7 @@ Le nombre de  “cas” est variable. On peut utiliser  un <code>if</code> seul,
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Plus dans la boucle"</span><span class="token punctuation">)</span>
 </code></pre>
 <p><em>Dans la console:</em></p>
-<pre><code>Dans la boucle, valeur de var1: 0
+<pre><code>&gt;&gt;&gt; Dans la boucle, valeur de var1: 0
 Dans la boucle, valeur de var1: 1
 Dans la boucle, valeur de var1: 2
 Dans la boucle, valeur de var1: 3
@@ -140,7 +175,7 @@ Plus dans la boucle
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Plus dans la boucle"</span><span class="token punctuation">)</span>
 </code></pre>
 <p><em>Dans la console</em>:</p>
-<pre><code>Dans la boucle, valeur de var1: 5
+<pre><code>&gt;&gt;&gt; Dans la boucle, valeur de var1: 5
 Dans la boucle, valeur de var1: 4
 Dans la boucle, valeur de var1: 3
 Dans la boucle, valeur de var1: 2
@@ -166,22 +201,175 @@ puissance<span class="token punctuation">(</span><span class="token number">2</s
 puissance<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span> <span class="token comment">#Calcul 10 exposant 4</span>
 </code></pre>
 <p><em>Dans la console</em>:</p>
-<pre><code>8
+<pre><code>&gt;&gt; 8
 10000
 </code></pre>
-<h2 id="défis-1-le-smiley">Défis 1: Le smiley</h2>
-<h3 id="défis">Défis</h3>
+<p><em>Remarque:</em><br>
+Les fonctions n’ont pas forcément de paramètre, comme par exemple, la fonction <code>print()</code>.</p>
+<h2 id="défi-1-le-smiley">Défi 1: Le smiley</h2>
+<h3 id="action-1">Action 1</h3>
 <blockquote>
 <p>Afficher un smiley sur l’écran de la carte micro:bit</p>
 </blockquote>
 <p><img src="https://docs.google.com/uc?id=1JFzH6CJBEGwXW3QAYFm8C5e7aFfX_3HA" alt=""></p>
 <h3 id="aide">Aide:</h3>
-<p>Tu disposes de la fonction:</p>
-<pre class=" language-python"><code class="prism  language-python">display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span><span class="token operator">&lt;</span>num_colonne<span class="token operator">&gt;</span><span class="token punctuation">,</span><span class="token operator">&lt;</span>num_ligne<span class="token operator">&gt;</span><span class="token punctuation">,</span><span class="token operator">&lt;</span>intentisité<span class="token operator">&gt;</span><span class="token punctuation">)</span>
-</code></pre>
-<p>pour allumer la LED de la colonne <code>&lt;num_colonne&gt;</code> (nombre entre 0 et 4) et de la ligne <code>&lt;num_ligne&gt;</code> (nombre entre 0 et 4) avec une intensité <code>&lt;intensité&gt;</code> (nombre entre 0 et 9)</p>
+<ul>
+<li>La fonction: <code>display.set_pixel(&lt;num_colonne&gt;,&lt;num_ligne&gt;,&lt;intentisité&gt;)</code> permet d’allumer la LED de la colonne <code>&lt;num_colonne&gt;</code> (nombre entre 0 et 4) et de la ligne <code>&lt;num_ligne&gt;</code> (nombre entre 0 et 4) avec une intensité <code>&lt;intensité&gt;</code> (nombre entre 0 et 9)</li>
+</ul>
 <h2 id="défis-2-la-pluie">Défis 2: La pluie</h2>
+<h3 id="action-1-1">Action 1</h3>
 <blockquote>
-<p>Présenter une goute d’eau</p>
+<p>Représenter une goutte d’eau qui tombe une fois</p>
 </blockquote>
+<p><img src="https://docs.google.com/uc?id=1PMQtjxeqI2HNB02Hz34ctROsy3mehKHc" alt=""></p>
+<h3 id="aide-1">Aide:</h3>
+<ul>
+<li>La fonction <code>sleep(&lt;temps&gt;)</code> met en pause l’exécution pendant <code>&lt;temps&gt;</code> millisecondes.</li>
+</ul>
+<h3 id="action-2">Action 2</h3>
+<blockquote>
+<p>Faire tomber une goutte dans chaque colonne</p>
+</blockquote>
+<p><img src="https://docs.google.com/uc?id=1sd9iSLvcfMjnvoPvUf8IbHksd2vVFtX4" alt=""></p>
+<h3 id="action-3">Action 3</h3>
+<blockquote>
+<p>Faire tomber la pluie de façon aléatoire</p>
+</blockquote>
+<h3 id="aide-2">Aide</h3>
+<ul>
+<li>La fonction <code>randint(&lt;nombre1&gt;,&lt;nombre2&gt;)</code> retourne un nombre entier  aléatoire entre les nombres entiers <code>&lt;nombre1&gt;</code> et <code>&lt;nombre2&gt;</code> inclus.</li>
+<li>Pour pourvoir utiliser cette fonction, il faut ajouter <code>from random import *</code> au début du programme.</li>
+</ul>
 
+<table>
+<thead>
+<tr>
+<th align="center">Bravo!  Tu as gagné ton premier badge!</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img src="https://docs.google.com/uc?id=1mxdm7U4UIaIGgUOoun9pMSYMnB011HcJ" alt=""></td>
+</tr>
+</tbody>
+</table><h2 id="défis-3-lalarme-incendie">Défis 3: L’alarme incendie</h2>
+<h3 id="action-1-2">Action 1</h3>
+<blockquote>
+<p>Programme une alarme incendie. Cette alarme doit afficher une coche si la température reste inférieure à 34°C et une tête de mort en cas de dépassement.</p>
+</blockquote>
+<p><img src="https://docs.google.com/uc?id=1dSA887hnF6EBEUfgh2J3iEGDwyWwoC2n" alt=""></p>
+<h3 id="aide-3">Aide</h3>
+<ul>
+<li>La fonction <code>temperature()</code> permet d’obtenir la température ambiante de la pièce. Elle renvoie la température du processeur de la carte sous la forme d’un nombre entier.</li>
+<li>Les instructions <code>display.show(Image.YES)</code> et <code>display.show(Image.SKULL)</code>  permettent d’afficher à l’écran, respectivement une coche et une tête de mort.</li>
+<li>Tu peux utiliser la fonction <code>print()</code> pour tracer la température, au fur et à mesure de l’exécution dans la console.</li>
+<li>Pour tester ton programme, tu peux laisser ton doigt sur la processeur de la carte pour faire monter la température.</li>
+</ul>
+<h2 id="défis-4-pierre-feuille-ciseaux">Défis 4: Pierre-feuille-ciseaux</h2>
+<h3 id="action-1-3">Action 1</h3>
+<blockquote>
+<p>Lorsque la carte est secouée, l’écran doit afficher de façon aléatoire à l’écran, une pierre, une feuille ou des ciseaux</p>
+</blockquote>
+<h3 id="aide-4">Aide</h3>
+<ul>
+<li>L’instruction <code>while(True)</code> permet de créer une boucle infinie.</li>
+<li>La fonction <code>accelerometer.was_gesture("shake")</code> retourne vrai (<code>True</code>) si la carte a été secouée, faux (<code>False</code>) sinon.</li>
+<li>Les instructions suivantes permettent d’afficher respectivement une pierre, une feuille ou des ciseaux:<br>
+<code>display.show(Image("00900:09990:99599:09990:00900"))</code><br>
+<code>display.show(Image("99900:90090:90009:90009:99999"))</code><br>
+<code>display.show( Image("96009:69090:00900:69090:96009"))</code></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="center">Bravo!  Tu as gagné ton deuxième badge!</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img src="https://docs.google.com/uc?id=18HiRKTA-m0i2rHz9fLgW6anVe9DVhEzr" alt=""></td>
+</tr>
+<tr>
+<td align="center"></td>
+</tr>
+</tbody>
+</table><h2 id="défis-5-le-labyrinthe">Défis 5: Le labyrinthe</h2>
+<h3 id="action-1-4">Action 1:</h3>
+<h3 id="action-2-1">Action 2:</h3>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">from</span> microbit <span class="token keyword">import</span> <span class="token operator">*</span>
+
+<span class="token keyword">def</span> <span class="token function">laby</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
+    display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
+    display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
+    display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
+    display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
+    display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
+    display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
+    display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
+    
+    
+
+<span class="token keyword">def</span>  <span class="token function">gauche</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">global</span> pos_x
+    <span class="token keyword">global</span> pos_y
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"gauche"</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> pos_x <span class="token operator">&lt;</span> <span class="token number">4</span> <span class="token punctuation">:</span>
+        display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span>pos_x<span class="token punctuation">,</span>pos_y<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
+        pos_x <span class="token operator">=</span> pos_x<span class="token operator">+</span><span class="token number">1</span>
+        display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span>pos_x<span class="token punctuation">,</span>pos_y<span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
+  
+<span class="token keyword">def</span> <span class="token function">droite</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">global</span> pos_x
+    <span class="token keyword">global</span> pos_y
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"droite"</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> pos_x <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token punctuation">:</span>
+        display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span>pos_x<span class="token punctuation">,</span>pos_y<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
+        pos_x <span class="token operator">=</span> pos_x<span class="token number">-1</span>
+        display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span>pos_x<span class="token punctuation">,</span>pos_y<span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">haut</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">global</span> pos_x
+    <span class="token keyword">global</span> pos_y
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"haut"</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> pos_y <span class="token operator">&gt;</span><span class="token number">0</span>  <span class="token punctuation">:</span>
+        display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span>pos_x<span class="token punctuation">,</span>pos_y<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
+        pos_y <span class="token operator">=</span> pos_y<span class="token number">-1</span>
+        display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span>pos_x<span class="token punctuation">,</span>pos_y<span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
+    
+display<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span>
+pos_x <span class="token operator">=</span> <span class="token number">4</span>
+pos_y <span class="token operator">=</span> <span class="token number">4</span>
+display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span>pos_x<span class="token punctuation">,</span>pos_y<span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+  
+  laby<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token comment">##if button_a.was_pressed() and button_b.was_pressed():</span>
+  <span class="token comment">##  haut()</span>
+  <span class="token keyword">if</span> button_a<span class="token punctuation">.</span>was_pressed<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    droite<span class="token punctuation">(</span><span class="token punctuation">)</span>        
+  <span class="token keyword">if</span> button_b<span class="token punctuation">.</span>was_pressed<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    gauche<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">if</span> accelerometer<span class="token punctuation">.</span>was_gesture<span class="token punctuation">(</span><span class="token string">"up"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    haut<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th align="center">Bravo!  Tu as gagné ton troisième badge!</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img src="https://docs.google.com/uc?id=16c0XypJpKssvt1ibHtbL_xHa2j8DCevA" alt=""></td>
+</tr>
+</tbody>
+</table>
+    </div>
+  </div>
+</body>
+
+</html>
