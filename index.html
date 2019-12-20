@@ -13,7 +13,7 @@
     <div class="stackedit__toc">
       
 <ul>
-<li><a href="#atelier-python">/ATELIER PYTHON|</a></li>
+<li><a href="#atelier-python">/ATELIER PYTHON</a></li>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#guide-de-démarrage">Guide de démarrage</a></li>
 <li><a href="#mémo-python">Mémo Python</a>
@@ -40,7 +40,7 @@
   </div>
   <div class="stackedit__right">
     <div class="stackedit__html">
-      <h1 id="atelier-python">/ATELIER PYTHON|</h1>
+      <h1 id="atelier-python">/ATELIER PYTHON</h1>
 <h1 id="introduction">Introduction</h1>
 <p>Lors de cet atelier, tu vas apprendre à programmer la carte <strong>BBC Micro:bit</strong> à l’aide du langage de programmation <strong>Python</strong>.<br>
 Tu vas devoir surmonter un maximum de <strong>défis</strong> pour gagner tes <strong>badges</strong> de développeur Python :</p>
@@ -135,18 +135,21 @@ var3 <span class="token operator">=</span> var2<span class="token operator">*</s
 </code></pre>
 <p><em>Exemple:</em></p>
 <pre class=" language-python"><code class="prism  language-python">var1 <span class="token operator">=</span> <span class="token number">7</span>
-<span class="token keyword">if</span> var1 <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Inférieur à 0"</span><span class="token punctuation">)</span>
-<span class="token keyword">elif</span> var <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+<span class="token keyword">if</span> var1 <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">:</span> 
+	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Inférieure à 0"</span><span class="token punctuation">)</span>
+<span class="token keyword">elif</span> var1 <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span> 
 	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Egale 0"</span><span class="token punctuation">)</span>	
-<span class="token keyword">elif</span> var1 <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token punctuation">:</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span> 
 	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Supérieure à 0"</span><span class="token punctuation">)</span>
 </code></pre>
 <p><em>Dans la console:</em></p>
 <pre><code>&gt;&gt;&gt; Supérieure à 0
 </code></pre>
-<p><em>Remarque :</em><br>
-Le nombre de  “cas” est variable. On peut utiliser  un <code>if</code> seul, le couple <code>if</code>/<code>else</code>  ou autant de <code>elif</code> que l’on souhaite :  <code>if</code>/<code>elif</code>/…/<code>elif</code> avec ou sans <code>else</code></p>
+<p><em>Remarque :</em></p>
+<ul>
+<li>Le nombre de  “cas” est variable. On peut utiliser  un <code>if</code> seul, le couple <code>if</code>/<code>else</code>  ou autant de <code>elif</code> que l’on souhaite :  <code>if</code>/<code>elif</code>/…/<code>elif</code> avec ou sans <code>else</code></li>
+<li>Pour tester une égalité il faut mettre deux égales: <code>==</code></li>
+</ul>
 <h2 id="boucle-bornée">Boucle bornée</h2>
 <p>Répète un bloc d’instruction un certain nombre de fois.</p>
 <pre class=" language-python"><code class="prism  language-python"><span class="token keyword">for</span> <span class="token operator">&lt;</span>variable<span class="token operator">&gt;</span> <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>nombre<span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -200,7 +203,7 @@ Plus dans la boucle
 <p><em>Exemple:</em></p>
 <pre class=" language-python"><code class="prism  language-python"><span class="token comment">#La définition de la fonction se fait avant son utilisation.</span>
 <span class="token comment">#Ici, on définit une fonction qui calcule si un triangle est rectangle</span>
-<span class="token comment">#connaissant la longueur de ses côtés.</span>
+<span class="token comment">#connaissant la longueur de ses côtés:</span>
 <span class="token keyword">def</span> <span class="token function">pythagore</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">)</span><span class="token punctuation">:</span>
 	var1<span class="token operator">=</span>a<span class="token operator">*</span>a
 	var2<span class="token operator">=</span>b<span class="token operator">*</span>b<span class="token operator">+</span>c<span class="token operator">*</span>c
@@ -208,7 +211,7 @@ Plus dans la boucle
 		<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Rectangle"</span><span class="token punctuation">)</span>
 	<span class="token keyword">else</span> <span class="token punctuation">:</span>
 		<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Non rectangle"</span><span class="token punctuation">)</span>
-<span class="token comment">#On peut ensuite utiliser la fonction plus loin dans le programme</span>
+<span class="token comment">#On peut ensuite utiliser la fonction plus loin dans le programme:</span>
 pythagore<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span> <span class="token comment">#Le triangle ayant pour longueurs 5, 3 et 4 est-il rectangle?</span>
 pythagore<span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token comment">#Le triangle ayant pour longueurs 7, 6 et 5 est-il rectangle?</span>
 </code></pre>
@@ -233,7 +236,7 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 <h2 id="défi-2-la-pluie">Défi 2: La pluie</h2>
 <h3 id="action-1-1">Action 1</h3>
 <blockquote>
-<p>Représenter une goutte d’eau qui tombe une fois</p>
+<p>Représenter une goutte d’eau qui tombe</p>
 </blockquote>
 <p><img src="https://docs.google.com/uc?id=1PMQtjxeqI2HNB02Hz34ctROsy3mehKHc" alt=""></p>
 <h3 id="aide-1">Aide:</h3>
@@ -242,17 +245,20 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 </ul>
 <h3 id="action-2">Action 2</h3>
 <blockquote>
-<p>Faire tomber une goutte dans chaque colonne</p>
+<p>Faire tomber quatre gouttes de suite au même endroit.</p>
 </blockquote>
-<p><img src="https://docs.google.com/uc?id=1sd9iSLvcfMjnvoPvUf8IbHksd2vVFtX4" alt=""></p>
 <h3 id="action-3">Action 3</h3>
 <blockquote>
-<p>Faire tomber la pluie de façon aléatoire</p>
+<p>Faire tomber une goutte une fois dans chaque colonne.<br>
+<img src="https://docs.google.com/uc?id=1sd9iSLvcfMjnvoPvUf8IbHksd2vVFtX4" alt=""></p>
+</blockquote>
+<h3 id="action-3-1">Action 3</h3>
+<blockquote>
+<p>Faire tomber la pluie de façon aléatoire.</p>
 </blockquote>
 <h3 id="aide-2">Aide</h3>
 <ul>
-<li>La fonction <code>randint(&lt;nombre1&gt;,&lt;nombre2&gt;)</code> retourne un nombre entier  aléatoire entre les nombres entiers <code>&lt;nombre1&gt;</code> et <code>&lt;nombre2&gt;</code> inclus.</li>
-<li>Pour pourvoir utiliser cette fonction, il faut ajouter <code>from random import *</code> au début du programme.</li>
+<li>La fonction <code>randint(&lt;nombre1&gt;,&lt;nombre2&gt;)</code> retourne un nombre entier  aléatoire entre les nombres entiers <code>&lt;nombre1&gt;</code> et <code>&lt;nombre2&gt;</code> inclus. Pour pourvoir utiliser cette fonction, il faut ajouter <code>from random import *</code> au début du programme.</li>
 </ul>
 
 <table>
@@ -269,29 +275,29 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 </table><h2 id="défi-3-lalarme-incendie">Défi 3: L’alarme incendie</h2>
 <h3 id="action-1-2">Action 1</h3>
 <blockquote>
-<p>Programme une alarme incendie. Cette alarme doit afficher une coche si la température reste inférieure à 34°C et une tête de mort en cas de dépassement.</p>
+<p>Programme une alarme incendie. Cette alarme doit afficher une coche lorsque la température reste inférieure à 34°C et une tête de mort en cas de dépassement.</p>
 </blockquote>
 <p><img src="https://docs.google.com/uc?id=1dSA887hnF6EBEUfgh2J3iEGDwyWwoC2n" alt=""></p>
 <h3 id="aide-3">Aide</h3>
 <ul>
-<li>La fonction <code>temperature()</code> permet d’obtenir la température ambiante de la pièce. Elle renvoie la température du processeur de la carte sous la forme d’un nombre entier.</li>
+<li>La fonction <code>temperature()</code> renvoie la température du processeur de la carte sous la forme d’un nombre entier. Cela permet d’obtenir une bonne approximation de la température ambiante de la pièce.</li>
 <li>Les instructions <code>display.show(Image.YES)</code> et <code>display.show(Image.SKULL)</code>  permettent d’afficher à l’écran, respectivement une coche et une tête de mort.</li>
 <li>Tu peux utiliser la fonction <code>print()</code> pour tracer la température, au fur et à mesure de l’exécution dans la console.</li>
-<li>Pour tester ton programme, tu peux laisser ton doigt sur la processeur de la carte pour faire monter la température.</li>
+<li>Pour tester ton programme, tu peux laisser ton doigt sur le processeur de la carte (à l’arrière) pour faire monter la température.</li>
 </ul>
 <h2 id="défi-4-pierre-feuille-ciseaux">Défi 4: Pierre-feuille-ciseaux</h2>
 <h3 id="action-1-3">Action 1</h3>
 <blockquote>
-<p>Lorsque la carte est secouée, l’écran doit afficher de façon aléatoire à l’écran, une pierre, une feuille ou des ciseaux</p>
+<p>Lorsque la carte est secouée, afficher de façon aléatoire à l’écran: une pierre, une feuille ou des ciseaux.</p>
 </blockquote>
 <h3 id="aide-4">Aide</h3>
 <ul>
 <li>L’instruction <code>while(True)</code> permet de créer une boucle infinie.</li>
 <li>La fonction <code>accelerometer.was_gesture("shake")</code> retourne vrai (<code>True</code>) si la carte a été secouée, faux (<code>False</code>) sinon.</li>
-<li>Les instructions suivantes permettent d’afficher respectivement une pierre, une feuille ou des ciseaux:<br>
+<li>Les instructions suivantes permettent d’afficher respectivement une pierre, une feuille ou des ciseaux à l’écran:<br>
 <code>display.show(Image("00900:09990:99599:09990:00900"))</code><br>
 <code>display.show(Image("99900:90090:90009:90009:99999"))</code><br>
-<code>display.show( Image("96009:69090:00900:69090:96009"))</code></li>
+<code>display.show(Image("96009:69090:00900:69090:96009"))</code></li>
 </ul>
 
 <table>
@@ -309,9 +315,25 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 </tr>
 </tbody>
 </table><h2 id="défi-5-le-labyrinthe">Défi 5: Le labyrinthe</h2>
+<blockquote>
+<p>Le but de ce dernier défi est de créer un labyrinthe que l’on peut<br>
+parcourir à l’aide d’une “bille” que l’on dirige en inclinant la carte dans toutes les directions.</p>
+</blockquote>
+<p><img src="https://docs.google.com/uc?id=1UWhlDp7BxK5ZdnQilL9H_fgIB1FXixm5" alt=""></p>
+<p>Le programme étant plus complexe, nous allons le découper en plusieurs fonctions.<br>
+Le squelette du programme est le suivant:</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">from</span> microbit <span class="token keyword">import</span> <span class="token operator">*</span>
+<span class="token keyword">def</span> <span class="token function">labyrinthe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Dessine les murs"</span><span class="token punctuation">)</span>
+	<span class="token comment"># A complèter#</span>
+
+<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+	labyrinthe<span class="token punctuation">(</span><span class="token punctuation">)</span>
+	
+</code></pre>
 <h3 id="action-1-4">Action 1:</h3>
 <blockquote>
-<p>Créer un labyrinthe</p>
+<p>Créer une fonction <code>labyrinthe()</code> qui dessine les “murs” du labyrinthe</p>
 </blockquote>
 <h3 id="action-2-1">Action 2:</h3>
 <blockquote>
