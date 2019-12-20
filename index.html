@@ -1,36 +1,10 @@
-<!DOCTYPE html>
-<html>
+---
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Découverte Python</title>
-  <link rel="stylesheet" href="https://stackedit.io/style.css" />
-</head>
 
-<body class="stackedit">
-  <div class="stackedit__left">
-    <div class="stackedit__toc">
-      
-<ul>
-<li><a href="#atelier-découverte-python">Atelier découverte Python</a>
-<ul>
-<li><a href="#guide-de-démarrage">Guide de démarrage</a></li>
-<li><a href="#mémo-python">Mémo Python</a></li>
-<li><a href="#défi-1-le-smiley">Défi 1: Le smiley</a></li>
-<li><a href="#défis-2-la-pluie">Défis 2: La pluie</a></li>
-<li><a href="#défis-3-lalarme-incendie">Défis 3: L’alarme incendie</a></li>
-<li><a href="#défis-4-pierre-feuille-ciseaux">Défis 4: Pierre-feuille-ciseaux</a></li>
-<li><a href="#défis-5-le-labyrinthe">Défis 5: Le labyrinthe</a></li>
-</ul>
-</li>
-</ul>
+---
 
-    </div>
-  </div>
-  <div class="stackedit__right">
-    <div class="stackedit__html">
-      <h1 id="atelier-découverte-python">Atelier découverte Python</h1>
+<h1 id="atelier-découverte-python">Atelier découverte Python</h1>
+<h2 id="introduction">Introduction</h2>
 <p>Lors de cet atelier, tu vas apprendre à programmer la carte <strong>BBC Micro:bit</strong> à l’aide du langage de programmation <strong>Python</strong>.<br>
 Tu vas devoir surmonter un maximum de <strong>défis</strong> pour gagner tes <strong>badges</strong> de développeur Python :</p>
 
@@ -55,7 +29,7 @@ Tu vas devoir surmonter un maximum de <strong>défis</strong> pour gagner tes <s
 </ul>
 <p><img src="https://docs.google.com/uc?id=11Me-Sfi0Nzcr3sPgfg-4r9cN6gqxOoeF" alt=""><img src="https://docs.google.com/uc?id=1q_2OtzdZw47tGmzcM8U0k4qPHO-tWVAO" alt=""></p>
 <ul>
-<li>de l’<strong>environnement de développement</strong> Mu</li>
+<li>de l’<strong>environnement de développement</strong> <em>Mu</em></li>
 </ul>
 <p><img src="https://docs.google.com/uc?id=1rBgO5Vv6Ipov51FQncRIIMywJ_fyWY6I" alt=""></p>
 <ul>
@@ -67,14 +41,15 @@ Tu vas devoir surmonter un maximum de <strong>défis</strong> pour gagner tes <s
 <h2 id="guide-de-démarrage">Guide de démarrage</h2>
 <p>Retrouve ici tout ce dont tu as besoin pour débuter:</p>
 <ul>
-<li>Un programme  Python est un texte qui permet de “commander” un ordinateur (la carte micro:bit est un petit ordinateur). Dans notre cas, ce programme est <strong>exécuté</strong> par un <strong>interpréteur</strong> situé dans la carte. Le texte ne doit comporter <strong>aucune erreur</strong>, sinon l’interpréteur signale un problème et l’exécution s’arrête. Les erreurs sont signalées dans la console (voir plus loin).</li>
-<li>Les lignes commençant par <code>#</code> ne sont pas prises en compte par l’interpréteur, elles permettent de faire des <strong>commentaires</strong>, de donner des explications sur le programme pour faciliter sa compréhension les lecteurs humains.<br>
-<em>Exemple:</em></li>
+<li>Un <strong>programme  Python</strong> est un texte qui permet de “commander” un ordinateur (la carte micro:bit est un petit ordinateur). Dans notre cas, ce programme est <strong>exécuté</strong> par un <strong>interpréteur</strong> situé dans la carte.</li>
+<li>Le texte ne doit comporter <strong>aucune erreur</strong>, sinon l’interpréteur signale un problème dans la console (voir plus loin) et l’exécution s’arrête. Attention de bien penser aux <code>:</code> et aux décalages de texte (touche tabulation) qui sont importants.</li>
+<li>Les lignes commençant par <code>#</code> ne sont pas prises en compte par l’interpréteur, elles permettent de faire des <strong>commentaires</strong>, de donner des explications sur le programme pour faciliter sa compréhension les lecteurs humains.</li>
 </ul>
+<p><em>Exemple:</em></p>
 <pre class=" language-python"><code class="prism  language-python"><span class="token comment">#Cette ligne ne sera pas prise en compte </span>
 </code></pre>
 <ul>
-<li>La fonction <code>print()</code> permet d’écrire dans la <strong>console</strong>. C’est une sorte de journal dans lequel l’interpréteur peut écrire pendant l’exécution du programme. Ce journal peut être utile au programmeur pour voir ce qu’il s’est passé lors de l’exécution. Dans l’environnement de développement Mu,  il est possible d’accéder à ce qui a été écrit dans la console en cliquant sur le bouton “REPL”:<br>
+<li>La fonction <code>print()</code> permet d’écrire dans la <strong>console</strong>. C’est une sorte de journal dans lequel l’interpréteur peut écrire pendant l’exécution du programme. Ce journal peut être utile au programmeur pour voir ce qu’il s’est passé lors de l’exécution. Dans l’environnement de développement <em>Mu</em>,  il est possible d’accéder à ce qui a été écrit dans la console en cliquant sur le bouton “REPL”:<br>
 <img src="https://docs.google.com/uc?id=1aGNmo8mjkL7Cv1RSey_7gwB4jtTMNTKP" alt=""></li>
 </ul>
 <p><em>Exemple:</em><br>
@@ -84,19 +59,19 @@ dans le programme:</p>
 <p>dans la console:<br>
 <img src="https://docs.google.com/uc?id=1Z1OHw4ed2i6RryKQwa7ZyXMRvyyik4eW" alt=""></p>
 <ul>
-<li>Les programmes qui utilisent la carte micro:bit doivent <strong>absolument commencer par</strong>:</li>
+<li>Les programmes qui utilisent la carte micro:bit <strong>doivent absolument commencer par</strong>:</li>
 </ul>
 <pre class=" language-python"><code class="prism  language-python"><span class="token keyword">from</span> microbit <span class="token keyword">import</span> <span class="token operator">*</span>
 </code></pre>
 <ul>
-<li>Pour <strong>téléverser</strong> un programme que tu as écrit dans l’environnement de développement Mu vers la carte micro:bit, il faut cliquer sur le bouton “Flasher”:<br>
+<li>Pour <strong>téléverser</strong> un programme que tu as écrit dans l’environnement de développement <em>Mu</em> vers la carte micro:bit, il faut cliquer sur le bouton “Flasher”:<br>
 <img src="https://docs.google.com/uc?id=16K_p-_F61BJJDsDU0nlLp0raK51ba5K9" alt=""></li>
 <li>Pour <strong>relancer</strong> un programme chargé dans la carte, il suffit d’appuyer sur le bouton à l’arrière de la carte.</li>
 </ul>
 <h2 id="mémo-python">Mémo Python</h2>
 <p>Retrouve ici un récapitulatif des principales fonctionnalités du langage Python:</p>
 <h3 id="variables">Variables</h3>
-<p>Permet de garder en mémoire des valeurs au cours de l’exécution</p>
+<p>Permet de garder en mémoire des valeurs au cours de l’exécution.</p>
 <p><em>Exemple:</em></p>
 <pre class=" language-python"><code class="prism  language-python"><span class="token comment">#Donne la valeur 2 à la variable var1</span>
 var1 <span class="token operator">=</span> <span class="token number">2</span>
@@ -113,7 +88,7 @@ var3 <span class="token operator">=</span> var2<span class="token operator">*</s
 <pre><code>&gt;&gt;&gt; 8
 </code></pre>
 <h3 id="conditionnelle">Conditionnelle</h3>
-<p>Permet d’exécuter différentes instructions selon des conditions</p>
+<p>Permet d’exécuter différentes instructions selon des conditions.</p>
 <pre class=" language-python"><code class="prism  language-python"><span class="token keyword">if</span> <span class="token operator">&lt;</span>condition1<span class="token operator">&gt;</span><span class="token punctuation">:</span>
 	<span class="token comment">#Si la condition 1 est vérifiée, execute le bloc d'instruction 1</span>
 	<span class="token operator">&lt;</span>bloc_instruction1<span class="token operator">&gt;</span>
@@ -126,8 +101,10 @@ var3 <span class="token operator">=</span> var2<span class="token operator">*</s
 </code></pre>
 <p><em>Exemple:</em></p>
 <pre class=" language-python"><code class="prism  language-python">var1 <span class="token operator">=</span> <span class="token number">7</span>
-<span class="token keyword">if</span> var1 <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token punctuation">:</span>
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Plus petit que 0"</span><span class="token punctuation">)</span>
+<span class="token keyword">if</span> var1 <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Egale 0"</span><span class="token punctuation">)</span>
+<span class="token keyword">elif</span> var1 <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token punctuation">:</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Entre 0 et 10"</span><span class="token punctuation">)</span>
 <span class="token keyword">elif</span> var1 <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token punctuation">:</span>
 	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Entre 0 et 10"</span><span class="token punctuation">)</span>
 <span class="token keyword">else</span> <span class="token punctuation">:</span>
@@ -214,7 +191,7 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 <p><img src="https://docs.google.com/uc?id=1JFzH6CJBEGwXW3QAYFm8C5e7aFfX_3HA" alt=""></p>
 <h3 id="aide">Aide:</h3>
 <ul>
-<li>La fonction: <code>display.set_pixel(&lt;num_colonne&gt;,&lt;num_ligne&gt;,&lt;intentisité&gt;)</code> permet d’allumer la LED de la colonne <code>&lt;num_colonne&gt;</code> (nombre entre 0 et 4) et de la ligne <code>&lt;num_ligne&gt;</code> (nombre entre 0 et 4) avec une intensité <code>&lt;intensité&gt;</code> (nombre entre 0 et 9)</li>
+<li>La fonction: <code>display.set_pixel(&lt;num_colonne&gt;,&lt;num_ligne&gt;,&lt;intentisité&gt;)</code> permet d’allumer la LED de la colonne <code>&lt;num_colonne&gt;</code> (nombre entre 0 et 4) et de la ligne <code>&lt;num_ligne&gt;</code> (nombre entre 0 et 4) avec une intensité <code>&lt;intensité&gt;</code> (nombre entre 0 et 9). Par exemple: <code>display.set_pixel(1,2,9)</code></li>
 </ul>
 <h2 id="défis-2-la-pluie">Défis 2: La pluie</h2>
 <h3 id="action-1-1">Action 1</h3>
@@ -244,7 +221,7 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 <table>
 <thead>
 <tr>
-<th align="center">Bravo!  Tu as gagné ton premier badge!</th>
+<th align="center">Tu as réussi? Bravo!  Tu as gagné ton premier badge!</th>
 </tr>
 </thead>
 <tbody>
@@ -283,7 +260,7 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 <table>
 <thead>
 <tr>
-<th align="center">Bravo!  Tu as gagné ton deuxième badge!</th>
+<th align="center">Tu as réussi? Bravo!  Tu as gagné ton deuxième badge!</th>
 </tr>
 </thead>
 <tbody>
@@ -296,7 +273,13 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 </tbody>
 </table><h2 id="défis-5-le-labyrinthe">Défis 5: Le labyrinthe</h2>
 <h3 id="action-1-4">Action 1:</h3>
+<blockquote>
+<p>Créer un labyrinthe</p>
+</blockquote>
 <h3 id="action-2-1">Action 2:</h3>
+<blockquote>
+<p>Blockquote</p>
+</blockquote>
 <pre class=" language-python"><code class="prism  language-python"><span class="token keyword">from</span> microbit <span class="token keyword">import</span> <span class="token operator">*</span>
 
 <span class="token keyword">def</span> <span class="token function">laby</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -359,7 +342,7 @@ display<span class="token punctuation">.</span>set_pixel<span class="token punct
 <table>
 <thead>
 <tr>
-<th align="center">Bravo!  Tu as gagné ton troisième badge!</th>
+<th align="center">Tu as réussi ? Bravo!  Tu as gagné ton troisième badge!</th>
 </tr>
 </thead>
 <tbody>
@@ -368,8 +351,3 @@ display<span class="token punctuation">.</span>set_pixel<span class="token punct
 </tr>
 </tbody>
 </table>
-    </div>
-  </div>
-</body>
-
-</html>
