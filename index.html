@@ -91,7 +91,7 @@ Tu vas devoir surmonter un maximum de <strong>défis</strong> pour gagner tes <s
 <pre class=" language-python"><code class="prism  language-python"><span class="token keyword">from</span> microbit <span class="token keyword">import</span> <span class="token operator">*</span>
 </code></pre>
 <ul>
-<li>Pour <strong>téléverser</strong> un programme que tu as écrit dans l’éditeur de code <em>Mu</em> vers la carte micro:bit, il faut cliquer sur le bouton “Flasher”:<br>
+<li>Pour <strong>téléverser</strong> un programme que tu as écrit dans l’éditeur de code <em>Mu</em> dans la carte micro:bit, il faut cliquer sur le bouton “Flasher”:<br>
 <img src="https://docs.google.com/uc?id=16K_p-_F61BJJDsDU0nlLp0raK51ba5K9" alt=""></li>
 <li>Pour <strong>relancer</strong> un programme chargé dans la carte, il suffit d’appuyer sur le bouton à l’arrière de la carte.</li>
 <li>La fonction <code>print()</code> permet d’écrire dans la <strong>console</strong>. C’est une sorte de journal dans lequel l’interpréteur peut écrire pendant l’exécution du programme. Ce journal peut être utile au programmeur pour voir ce qu’il s’est passé lors de l’exécution. Dans l’éditeur de code <em>Mu</em>,  il est possible d’y accéder en cliquant sur le bouton “REPL”, puis en relançant le programme chargé dans la carte (bouton arrière).<br>
@@ -236,7 +236,7 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 <h2 id="défi-2-la-pluie">Défi 2: La pluie</h2>
 <h3 id="action-1-1">Action 1</h3>
 <blockquote>
-<p>Représenter une goutte d’eau qui tombe</p>
+<p>Représenter une goutte d’eau qui tombe.</p>
 </blockquote>
 <p><img src="https://docs.google.com/uc?id=1PMQtjxeqI2HNB02Hz34ctROsy3mehKHc" alt=""></p>
 <h3 id="aide-1">Aide:</h3>
@@ -252,7 +252,7 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 <p>Faire tomber une goutte une fois dans chaque colonne.</p>
 </blockquote>
 <p><img src="https://docs.google.com/uc?id=1sd9iSLvcfMjnvoPvUf8IbHksd2vVFtX4" alt=""></p>
-<h3 id="action-3-1">Action 3</h3>
+<h3 id="action-4">Action 4</h3>
 <blockquote>
 <p>Faire tomber la pluie de façon aléatoire.</p>
 </blockquote>
@@ -280,9 +280,9 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 <p><img src="https://docs.google.com/uc?id=1dSA887hnF6EBEUfgh2J3iEGDwyWwoC2n" alt=""></p>
 <h3 id="aide-3">Aide</h3>
 <ul>
-<li>La fonction <code>temperature()</code> renvoie la température du processeur de la carte sous la forme d’un nombre entier. Cela permet d’obtenir une bonne approximation de la température ambiante de la pièce.</li>
+<li>La fonction <code>temperature()</code> renvoie la température du processeur de la carte sous la forme d’un nombre entier. Cela permet d’obtenir une approximation de la température ambiante de la pièce.</li>
 <li>Les instructions <code>display.show(Image.YES)</code> et <code>display.show(Image.SKULL)</code>  permettent d’afficher à l’écran, respectivement une coche et une tête de mort.</li>
-<li>Tu peux utiliser la fonction <code>print()</code> pour tracer la température, au fur et à mesure de l’exécution dans la console.</li>
+<li>Tu peux utiliser la fonction <code>print()</code> pour tracer la température, au fur et à mesure de l’exécution, dans la console.</li>
 <li>Pour tester ton programme, tu peux laisser ton doigt sur le processeur de la carte (à l’arrière) pour faire monter la température.</li>
 </ul>
 <h2 id="défi-4-pierre-feuille-ciseaux">Défi 4: Pierre-feuille-ciseaux</h2>
@@ -316,13 +316,11 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 </tbody>
 </table><h2 id="défi-5-le-labyrinthe">Défi 5: Le labyrinthe</h2>
 <blockquote>
-<p>Le but de ce dernier défi est de créer un labyrinthe que l’on peut<br>
-parcourir à l’aide d’une “bille” que l’on dirige avec les boutons A et B.<br>
-(A = vers la gauche, B=vers la droite, A+B = vers le haut)</p>
+<p>Le but de ce dernier défi est de créer un labyrinthe que l’on peut parcourir à l’aide d’une “bille” que l’on dirige avec les boutons A et B. (A = vers la gauche, B=vers la droite, A+B = vers le haut)</p>
 </blockquote>
 <p><img src="https://docs.google.com/uc?id=1UWhlDp7BxK5ZdnQilL9H_fgIB1FXixm5" alt=""></p>
-<p>Le programme étant plus complexe, nous allons le découper en plusieurs fonctions.<br>
-Le squelette du programme est le suivant, vous pouvez le copier-coller dans votre éditeur de code <em>Mu</em></p>
+<p>Le programme étant plus complexe, nous allons le découper en utilisant des fonctions.<br>
+Le squelette du programme est le suivant, tu peux le copier-coller dans ton éditeur de code <em>Mu</em></p>
 <pre class=" language-python"><code class="prism  language-python"><span class="token comment">#################</span>
 <span class="token comment">### Variables ###</span>
 <span class="token comment">#################    </span>
@@ -359,25 +357,29 @@ display<span class="token punctuation">.</span>set_pixel<span class="token punct
     sleep<span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">)</span>
     <span class="token comment">#Si les deux boutons sont appuyés en même temps</span>
     <span class="token keyword">if</span> button_a<span class="token punctuation">.</span>is_pressed<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">and</span> button_b<span class="token punctuation">.</span>is_pressed<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token comment">#Appelle la fonction deplace_bille avec le paramètre "H"</span>
+        <span class="token comment">#Appelle la fonction deplace_bille(direction) avec le paramètre "H"</span>
         deplace_bille<span class="token punctuation">(</span><span class="token string">"H"</span><span class="token punctuation">)</span> 
     <span class="token comment">#Sinon, si le bouton A est appuyé       </span>
     <span class="token keyword">elif</span> button_a<span class="token punctuation">.</span>is_pressed<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token comment">#Appelle la fonction deplace_bille avec le paramètre "G"</span>
+        <span class="token comment">#Appelle la fonction deplace_bille(direction) avec le paramètre "G"</span>
         deplace_bille<span class="token punctuation">(</span><span class="token string">"G"</span><span class="token punctuation">)</span>  
     <span class="token comment">#Sinon, si le bouton b est appuyé      </span>
     <span class="token keyword">elif</span> button_b<span class="token punctuation">.</span>is_pressed<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token comment">#Appelle la fonction deplace_bille avec le paramètre "D"</span>
+        <span class="token comment">#Appelle la fonction deplace_bille(direction) avec le paramètre "D"</span>
         deplace_bille<span class="token punctuation">(</span><span class="token string">"D"</span><span class="token punctuation">)</span>
 	
 </code></pre>
 <h3 id="action-1-4">Action 1:</h3>
 <blockquote>
-<p>Compléter  la fonction <code>dessine_mur()</code> qui dessine les “murs” du labyrinthe</p>
+<p>Compléter  la fonction <code>dessine_mur()</code> qui dessine les “murs” du labyrinthe puis tester le programme.</p>
 </blockquote>
 <h3 id="action-2-1">Action 2:</h3>
 <blockquote>
 <p>Compléter la fonction <code>deplace_bille(direction)</code> pour qu’elle déplace la bille dans la direction donnée par le paramètre : “H” &gt; vers le haut, “G” &gt; vers la gauche et “D” &gt; vers la droite.</p>
+</blockquote>
+<h3 id="action-3-1">Action 3:</h3>
+<blockquote>
+<p>Amuse toi à modifier le labyrinthe pour le rendre plus complexe.</p>
 </blockquote>
 
 <table>
