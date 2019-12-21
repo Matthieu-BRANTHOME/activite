@@ -66,7 +66,7 @@ Tu vas devoir surmonter un maximum de <strong>défis</strong> pour gagner tes <s
 </ul>
 <p><img src="https://docs.google.com/uc?id=11Me-Sfi0Nzcr3sPgfg-4r9cN6gqxOoeF" alt=""><img src="https://docs.google.com/uc?id=1q_2OtzdZw47tGmzcM8U0k4qPHO-tWVAO" alt=""></p>
 <ul>
-<li>de l’<strong>environnement de développement</strong> <em>Mu</em></li>
+<li>de l’<strong>éditeur de code</strong> <em>Mu</em></li>
 </ul>
 <p><img src="https://docs.google.com/uc?id=1rBgO5Vv6Ipov51FQncRIIMywJ_fyWY6I" alt=""></p>
 <ul>
@@ -91,10 +91,10 @@ Tu vas devoir surmonter un maximum de <strong>défis</strong> pour gagner tes <s
 <pre class=" language-python"><code class="prism  language-python"><span class="token keyword">from</span> microbit <span class="token keyword">import</span> <span class="token operator">*</span>
 </code></pre>
 <ul>
-<li>Pour <strong>téléverser</strong> un programme que tu as écrit dans l’environnement de développement <em>Mu</em> vers la carte micro:bit, il faut cliquer sur le bouton “Flasher”:<br>
+<li>Pour <strong>téléverser</strong> un programme que tu as écrit dans l’éditeur de code <em>Mu</em> vers la carte micro:bit, il faut cliquer sur le bouton “Flasher”:<br>
 <img src="https://docs.google.com/uc?id=16K_p-_F61BJJDsDU0nlLp0raK51ba5K9" alt=""></li>
 <li>Pour <strong>relancer</strong> un programme chargé dans la carte, il suffit d’appuyer sur le bouton à l’arrière de la carte.</li>
-<li>La fonction <code>print()</code> permet d’écrire dans la <strong>console</strong>. C’est une sorte de journal dans lequel l’interpréteur peut écrire pendant l’exécution du programme. Ce journal peut être utile au programmeur pour voir ce qu’il s’est passé lors de l’exécution. Dans l’environnement de développement <em>Mu</em>,  il est possible d’y accéder en cliquant sur le bouton “REPL”, puis en relançant le programme chargé dans la carte (bouton arrière).<br>
+<li>La fonction <code>print()</code> permet d’écrire dans la <strong>console</strong>. C’est une sorte de journal dans lequel l’interpréteur peut écrire pendant l’exécution du programme. Ce journal peut être utile au programmeur pour voir ce qu’il s’est passé lors de l’exécution. Dans l’éditeur de code <em>Mu</em>,  il est possible d’y accéder en cliquant sur le bouton “REPL”, puis en relançant le programme chargé dans la carte (bouton arrière).<br>
 <img src="https://docs.google.com/uc?id=1aGNmo8mjkL7Cv1RSey_7gwB4jtTMNTKP" alt=""><br>
 <em>Exemple:</em></li>
 </ul>
@@ -147,7 +147,7 @@ var3 <span class="token operator">=</span> var2<span class="token operator">*</s
 </code></pre>
 <p><em>Remarque :</em></p>
 <ul>
-<li>Le nombre de  “cas” est variable. On peut utiliser  un <code>if</code> seul, le couple <code>if</code>/<code>else</code>  ou autant de <code>elif</code> que l’on souhaite :  <code>if</code>/<code>elif</code>/…/<code>elif</code> avec ou sans <code>else</code></li>
+<li>Le nombre de  “cas” est variable. On peut utiliser  un <code>if</code> seul, le couple <code>if</code>/<code>else</code>  ou autant de <code>elif</code> que l’on souhaite :  <code>if</code>/<code>elif</code>/…/<code>elif</code> avec ou sans <code>else</code> à la fin.</li>
 <li>Pour tester une égalité il faut mettre deux égales: <code>==</code></li>
 </ul>
 <h2 id="boucle-bornée">Boucle bornée</h2>
@@ -249,9 +249,9 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 </blockquote>
 <h3 id="action-3">Action 3</h3>
 <blockquote>
-<p>Faire tomber une goutte une fois dans chaque colonne.<br>
-<img src="https://docs.google.com/uc?id=1sd9iSLvcfMjnvoPvUf8IbHksd2vVFtX4" alt=""></p>
+<p>Faire tomber une goutte une fois dans chaque colonne.</p>
 </blockquote>
+<p><img src="https://docs.google.com/uc?id=1sd9iSLvcfMjnvoPvUf8IbHksd2vVFtX4" alt=""></p>
 <h3 id="action-3-1">Action 3</h3>
 <blockquote>
 <p>Faire tomber la pluie de façon aléatoire.</p>
@@ -317,86 +317,68 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 </table><h2 id="défi-5-le-labyrinthe">Défi 5: Le labyrinthe</h2>
 <blockquote>
 <p>Le but de ce dernier défi est de créer un labyrinthe que l’on peut<br>
-parcourir à l’aide d’une “bille” que l’on dirige en inclinant la carte dans toutes les directions.</p>
+parcourir à l’aide d’une “bille” que l’on dirige avec les boutons A et B.<br>
+(A = vers la gauche, B=vers la droite, A+B = vers le haut)</p>
 </blockquote>
 <p><img src="https://docs.google.com/uc?id=1UWhlDp7BxK5ZdnQilL9H_fgIB1FXixm5" alt=""></p>
 <p>Le programme étant plus complexe, nous allons le découper en plusieurs fonctions.<br>
-Le squelette du programme est le suivant:</p>
-<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">from</span> microbit <span class="token keyword">import</span> <span class="token operator">*</span>
-<span class="token keyword">def</span> <span class="token function">labyrinthe</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Dessine les murs"</span><span class="token punctuation">)</span>
-	<span class="token comment"># A complèter#</span>
+Le squelette du programme est le suivant, vous pouvez le copier-coller dans votre éditeur de code <em>Mu</em></p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment">#################</span>
+<span class="token comment">### Variables ###</span>
+<span class="token comment">#################    </span>
+<span class="token comment">#Conserve en mémoire la position (colone et ligne) de la bille </span>
+<span class="token comment">#Les variables sont initialisées à 4</span>
+col_bille <span class="token operator">=</span> <span class="token number">4</span>
+lig_bille <span class="token operator">=</span> <span class="token number">4</span>
 
+<span class="token comment">#################</span>
+<span class="token comment">### Fonctions ###</span>
+<span class="token comment">#################</span>
+<span class="token keyword">def</span> <span class="token function">dessine_mur</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Dessine les murs"</span><span class="token punctuation">)</span>
+    
+    <span class="token comment"># A complèter...</span>
+    
+<span class="token keyword">def</span> <span class="token function">deplace_bille</span><span class="token punctuation">(</span>direction<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment">#Rend les variables lig_bille et col_bille modifiables depuis la fonction</span>
+    <span class="token keyword">global</span> lig_bille<span class="token punctuation">,</span> col_bille 
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Deplace dans la direction:"</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>direction<span class="token punctuation">)</span>
+    
+    <span class="token comment"># A compléter...</span>
+
+<span class="token comment">#########################    </span>
+<span class="token comment">### Boucle principale ###</span>
+<span class="token comment">#########################</span>
+<span class="token comment">#Appelle la fonction dessine_mur()</span>
+dessine_mur<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># Affiche la bille au départ</span>
+display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span>col_bille<span class="token punctuation">,</span>lig_bille<span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
+<span class="token comment"># Boucle infinie</span>
 <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
-	labyrinthe<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    sleep<span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">)</span>
+    <span class="token comment">#Si les deux boutons sont appuyés en même temps</span>
+    <span class="token keyword">if</span> button_a<span class="token punctuation">.</span>is_pressed<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">and</span> button_b<span class="token punctuation">.</span>is_pressed<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment">#Appelle la fonction deplace_bille avec le paramètre "H"</span>
+        deplace_bille<span class="token punctuation">(</span><span class="token string">"H"</span><span class="token punctuation">)</span> 
+    <span class="token comment">#Sinon, si le bouton A est appuyé       </span>
+    <span class="token keyword">elif</span> button_a<span class="token punctuation">.</span>is_pressed<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment">#Appelle la fonction deplace_bille avec le paramètre "G"</span>
+        deplace_bille<span class="token punctuation">(</span><span class="token string">"G"</span><span class="token punctuation">)</span>  
+    <span class="token comment">#Sinon, si le bouton b est appuyé      </span>
+    <span class="token keyword">elif</span> button_b<span class="token punctuation">.</span>is_pressed<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment">#Appelle la fonction deplace_bille avec le paramètre "D"</span>
+        deplace_bille<span class="token punctuation">(</span><span class="token string">"D"</span><span class="token punctuation">)</span>
 	
 </code></pre>
 <h3 id="action-1-4">Action 1:</h3>
 <blockquote>
-<p>Créer une fonction <code>labyrinthe()</code> qui dessine les “murs” du labyrinthe</p>
+<p>Compléter  la fonction <code>dessine_mur()</code> qui dessine les “murs” du labyrinthe</p>
 </blockquote>
 <h3 id="action-2-1">Action 2:</h3>
 <blockquote>
-<p>Blockquote</p>
+<p>Compléter la fonction <code>deplace_bille(direction)</code> pour qu’elle déplace la bille dans la direction donnée par le paramètre : “H” &gt; vers le haut, “G” &gt; vers la gauche et “D” &gt; vers la droite.</p>
 </blockquote>
-<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">from</span> microbit <span class="token keyword">import</span> <span class="token operator">*</span>
-
-<span class="token keyword">def</span> <span class="token function">laby</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
-    display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
-    display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
-    display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
-    display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
-    display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
-    display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
-    display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
-    
-    
-
-<span class="token keyword">def</span>  <span class="token function">gauche</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">global</span> pos_x
-    <span class="token keyword">global</span> pos_y
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"gauche"</span><span class="token punctuation">)</span>
-    <span class="token keyword">if</span> pos_x <span class="token operator">&lt;</span> <span class="token number">4</span> <span class="token punctuation">:</span>
-        display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span>pos_x<span class="token punctuation">,</span>pos_y<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
-        pos_x <span class="token operator">=</span> pos_x<span class="token operator">+</span><span class="token number">1</span>
-        display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span>pos_x<span class="token punctuation">,</span>pos_y<span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
-  
-<span class="token keyword">def</span> <span class="token function">droite</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">global</span> pos_x
-    <span class="token keyword">global</span> pos_y
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"droite"</span><span class="token punctuation">)</span>
-    <span class="token keyword">if</span> pos_x <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token punctuation">:</span>
-        display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span>pos_x<span class="token punctuation">,</span>pos_y<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
-        pos_x <span class="token operator">=</span> pos_x<span class="token number">-1</span>
-        display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span>pos_x<span class="token punctuation">,</span>pos_y<span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
-<span class="token keyword">def</span> <span class="token function">haut</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">global</span> pos_x
-    <span class="token keyword">global</span> pos_y
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"haut"</span><span class="token punctuation">)</span>
-    <span class="token keyword">if</span> pos_y <span class="token operator">&gt;</span><span class="token number">0</span>  <span class="token punctuation">:</span>
-        display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span>pos_x<span class="token punctuation">,</span>pos_y<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
-        pos_y <span class="token operator">=</span> pos_y<span class="token number">-1</span>
-        display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span>pos_x<span class="token punctuation">,</span>pos_y<span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
-    
-display<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span>
-pos_x <span class="token operator">=</span> <span class="token number">4</span>
-pos_y <span class="token operator">=</span> <span class="token number">4</span>
-display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span>pos_x<span class="token punctuation">,</span>pos_y<span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
-
-
-<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
-  
-  laby<span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token comment">##if button_a.was_pressed() and button_b.was_pressed():</span>
-  <span class="token comment">##  haut()</span>
-  <span class="token keyword">if</span> button_a<span class="token punctuation">.</span>was_pressed<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    droite<span class="token punctuation">(</span><span class="token punctuation">)</span>        
-  <span class="token keyword">if</span> button_b<span class="token punctuation">.</span>was_pressed<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    gauche<span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token keyword">if</span> accelerometer<span class="token punctuation">.</span>was_gesture<span class="token punctuation">(</span><span class="token string">"up"</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    haut<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
 
 <table>
 <thead>
