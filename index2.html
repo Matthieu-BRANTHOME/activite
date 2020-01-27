@@ -31,7 +31,7 @@
 <li><a href="#défi-2-la-pluie">Défi 2: La pluie</a></li>
 <li><a href="#défi-3-pierre-feuille-ciseaux">Défi 3: Pierre-feuille-ciseaux</a></li>
 <li><a href="#défi-4-la-station-météo">Défi 4: La station météo</a></li>
-<li><a href="#défi-5-le-clignotant">Défi 5: Le clignotant</a></li>
+<li><a href="#défi-5-les-clignotants">Défi 5: Les clignotants</a></li>
 <li><a href="#défi-6-le-labyrinthe">Défi 6: Le labyrinthe</a></li>
 </ul>
 </li>
@@ -297,7 +297,7 @@ Les fonctions n’ont pas forcément de paramètre.</p>
 <h2 id="défi-4-la-station-météo">Défi 4: La station météo</h2>
 <h3 id="action-1-3">Action 1</h3>
 <blockquote>
-<p>Affiche à l’écran une image selon la luminosité:</p>
+<p>Afficher à l’écran une image différente selon la luminosité ambiante:</p>
 <ul>
 <li>entre 0 et 10 :  image de la nuit</li>
 <li>entre 10 et 150 : un parapluie</li>
@@ -329,14 +329,19 @@ Les fonctions n’ont pas forcément de paramètre.</p>
 <td align="center"></td>
 </tr>
 </tbody>
-</table><h2 id="défi-5-le-clignotant">Défi 5: Le clignotant</h2>
+</table><h2 id="défi-5-les-clignotants">Défi 5: Les clignotants</h2>
+<h3 id="action-1-4">Action 1:</h3>
+<blockquote>
+<p>Afficher un clignotant à gauche tant que la touche A est appuyée. Afficher un clignotant à droite tant que la touche B est appuyée.</p>
+</blockquote>
+<p><img src="https://docs.google.com/uc?id=1v71SL-dLVHLXnPeVJx6Rh7ADHiFJoe4O" alt=""></p>
 <h2 id="défi-6-le-labyrinthe">Défi 6: Le labyrinthe</h2>
 <blockquote>
 <p>Le but de ce dernier défi est de créer un labyrinthe que l’on peut parcourir à l’aide d’une “bille” que l’on dirige avec les boutons A et B. (A = vers la gauche, B=vers la droite, A+B = vers le haut)</p>
 </blockquote>
 <p><img src="https://docs.google.com/uc?id=1UWhlDp7BxK5ZdnQilL9H_fgIB1FXixm5" alt=""></p>
 <p>Le programme étant plus complexe, nous allons le découper en utilisant des fonctions.<br>
-Le squelette du programme est le suivant, tu peux le copier-coller dans ton éditeur de code <em>Mu</em></p>
+Le squelette du programme est le suivant, tu peux le copier-coller dans ton éditeur de code <em>TigerJython</em></p>
 <pre class=" language-python"><code class="prism  language-python"><span class="token comment">#################</span>
 <span class="token comment">### Variables ###</span>
 <span class="token comment">#################    </span>
@@ -348,11 +353,13 @@ lig_bille <span class="token operator">=</span> <span class="token number">4</sp
 <span class="token comment">#################</span>
 <span class="token comment">### Fonctions ###</span>
 <span class="token comment">#################</span>
+<span class="token comment"># Dessine les murs du labyrinthe</span>
 <span class="token keyword">def</span> <span class="token function">dessine_mur</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Dessine les murs"</span><span class="token punctuation">)</span>
     
     <span class="token comment"># A complèter...</span>
-    
+
+<span class="token comment"># Déplace la bille dans la directeur indiqué par le paramètre    </span>
 <span class="token keyword">def</span> <span class="token function">deplace_bille</span><span class="token punctuation">(</span>direction<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token comment">#Rend les variables lig_bille et col_bille modifiables depuis la fonction</span>
     <span class="token keyword">global</span> lig_bille<span class="token punctuation">,</span> col_bille 
@@ -361,14 +368,14 @@ lig_bille <span class="token operator">=</span> <span class="token number">4</sp
     
     <span class="token comment"># A compléter...</span>
 
-<span class="token comment">#########################    </span>
-<span class="token comment">### Boucle principale ###</span>
-<span class="token comment">#########################</span>
+<span class="token comment">###########################    </span>
+<span class="token comment">### Programme principal ###</span>
+<span class="token comment">###########################</span>
 <span class="token comment">#Appelle la fonction dessine_mur()</span>
 dessine_mur<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token comment"># Affiche la bille au départ</span>
 display<span class="token punctuation">.</span>set_pixel<span class="token punctuation">(</span>col_bille<span class="token punctuation">,</span>lig_bille<span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span>
-<span class="token comment"># Boucle infinie</span>
+<span class="token comment"># Boucle infinie du jeu</span>
 <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
     sleep<span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">)</span>
     <span class="token comment">#Si les deux boutons sont appuyés en même temps</span>
@@ -385,7 +392,7 @@ display<span class="token punctuation">.</span>set_pixel<span class="token punct
         deplace_bille<span class="token punctuation">(</span><span class="token string">"D"</span><span class="token punctuation">)</span>
 	
 </code></pre>
-<h3 id="action-1-4">Action 1:</h3>
+<h3 id="action-1-5">Action 1:</h3>
 <blockquote>
 <p>Compléter  la fonction <code>dessine_mur()</code> qui dessine les “murs” du labyrinthe puis tester le programme.</p>
 </blockquote>
