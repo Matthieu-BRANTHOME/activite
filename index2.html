@@ -156,9 +156,9 @@ var3 <span class="token operator">=</span> var2<span class="token operator">*</s
 <p><em>Dans la console:</em></p>
 <pre><code>&gt;&gt;&gt; Supérieure à 0
 </code></pre>
-<p><em>Remarque :</em></p>
+<p><em>Remarques :</em></p>
 <ul>
-<li>Le nombre de  “cas” est variable. On peut utiliser:  un <code>if</code> seul, le couple <code>if</code>/<code>else</code> ou un ou plusieurs <code>elif</code> .</li>
+<li>Le nombre de  “cas” est variable. On peut utiliser:  un <code>if</code> seul, le couple <code>if</code>/<code>else</code> seul ou accompagné d’un ou plusieurs <code>elif</code> .</li>
 <li>Pour tester une égalité il faut mettre deux égales: <code>==</code></li>
 </ul>
 <h2 id="boucle-bornée">Boucle bornée</h2>
@@ -230,7 +230,7 @@ pythagore<span class="token punctuation">(</span><span class="token number">7</s
 Non rectangle
 </code></pre>
 <p><em>Remarque:</em><br>
-Les fonctions n’ont pas forcément de paramètre.</p>
+Les fonctions n’ont pas forcément de paramètre. Par exemple, la fonction <code>temperature()</code> renvoie la température du microprocesseur de la carte.</p>
 <h1 id="les-défis">Les défis</h1>
 <p>Retrouve ici les défis que tu dois relever:</p>
 <h2 id="défi-1-le-smiley">Défi 1: Le smiley</h2>
@@ -246,7 +246,7 @@ Les fonctions n’ont pas forcément de paramètre.</p>
 <h2 id="défi-2-la-pluie">Défi 2: La pluie</h2>
 <h3 id="action-1-1">Action 1</h3>
 <blockquote>
-<p>Représenter une goutte d’eau qui tombe.</p>
+<p>Représenter une goutte d’eau qui tombe dans la 1ère colonne.</p>
 </blockquote>
 <p><img src="https://docs.google.com/uc?id=1PMQtjxeqI2HNB02Hz34ctROsy3mehKHc" alt=""></p>
 <h3 id="aide-1">Aide:</h3>
@@ -264,11 +264,11 @@ Les fonctions n’ont pas forcément de paramètre.</p>
 <p><img src="https://docs.google.com/uc?id=1sd9iSLvcfMjnvoPvUf8IbHksd2vVFtX4" alt=""></p>
 <h3 id="action-4">Action 4</h3>
 <blockquote>
-<p>Faire tomber la pluie de façon aléatoire.</p>
+<p>Faire tomber la pluie dans des colonnes choisies aléatoirement.</p>
 </blockquote>
 <h3 id="aide-2">Aide</h3>
 <ul>
-<li>La fonction <code>randint(&lt;nombre1&gt;,&lt;nombre2&gt;)</code> retourne un nombre entier  aléatoire entre les nombres entiers <code>&lt;nombre1&gt;</code> et <code>&lt;nombre2&gt;</code> inclus. Pour pourvoir utiliser cette fonction, il faut ajouter <code>from random import *</code> au début du programme. <em>Exemple:</em> <code>randint(0;10)</code> retourne un nombre aléatoire en 0 et 10.</li>
+<li>La fonction <code>randint(&lt;nombre1&gt;,&lt;nombre2&gt;)</code> retourne un nombre entier  aléatoire compris entre les nombres entiers <code>&lt;nombre1&gt;</code> et <code>&lt;nombre2&gt;</code> inclus. Pour pourvoir utiliser cette fonction, il faut ajouter <code>from random import *</code> au début du programme. <em>Exemple:</em> <code>randint(0;10)</code> retourne un nombre aléatoire compris entre 0 et 10.</li>
 </ul>
 
 <table>
@@ -289,10 +289,15 @@ Les fonctions n’ont pas forcément de paramètre.</p>
 </blockquote>
 <h3 id="aide-3">Aide</h3>
 <ul>
-<li>Les instructions suivantes permettent d’afficher respectivement une pierre, une feuille ou des ciseaux à l’écran:<br>
+<li>
+<p>Les instructions suivantes permettent d’afficher respectivement une pierre, une feuille ou des ciseaux à l’écran:<br>
 <code>display.show(Image("00000:09990:99999:09990:00000"))</code><br>
 <code>display.show(Image("99900:90090:90009:90009:99999"))</code><br>
-<code>display.show(Image("96009:69090:00900:69090:96009"))</code></li>
+<code>display.show(Image("96009:69090:00900:69090:96009"))</code></p>
+</li>
+<li>
+<p>Une fois que le programme fonctionne, appuyer sur la touche “Reset” à l’arrière de la carte pour le relancer.</p>
+</li>
 </ul>
 <h2 id="défi-4-la-station-météo">Défi 4: La station météo</h2>
 <h3 id="action-1-3">Action 1</h3>
@@ -307,7 +312,7 @@ Les fonctions n’ont pas forcément de paramètre.</p>
 <h3 id="aide-4">Aide</h3>
 <ul>
 <li>La fonction <code>display.read_light_level()</code> renvoie la luminosité qui arrive sur l’écran sous la forme d’un nombre entier entre 0 et 255 .</li>
-<li>Les instruction suivantes permettent d’afficher respectivement la nuit, un parapluie et un soleil à l’écran:<br>
+<li>Les instructions suivantes permettent d’afficher respectivement une image de la nuit, un parapluie et un soleil à l’écran:<br>
 <code>display.show(Image("40404:04040:40404:04040:40404"))</code><br>
 <code>display.show(Image("06660:66666:00600:60600:06600"))</code><br>
 <code>display.show(Image("60606:08880:68986:08880:60606"))</code></li>
@@ -332,9 +337,13 @@ Les fonctions n’ont pas forcément de paramètre.</p>
 </table><h2 id="défi-5-les-clignotants">Défi 5: Les clignotants</h2>
 <h3 id="action-1-4">Action 1:</h3>
 <blockquote>
-<p>Afficher un clignotant à gauche tant que la touche A est appuyée. Afficher un clignotant à droite tant que la touche B est appuyée.</p>
+<p>Afficher un clignotant à gauche tant que le bouton A est appuyée. Afficher un clignotant à droite tant que le bouton B est appuyée.</p>
 </blockquote>
 <p><img src="https://docs.google.com/uc?id=1v71SL-dLVHLXnPeVJx6Rh7ADHiFJoe4O" alt=""></p>
+<h3 id="aide-5">Aide:</h3>
+<ul>
+<li>La fonction <code>button_a.is_pressed()</code> retourne <code>True</code> (vrai) lorsque le bouton A est appuyé. La fonction <code>button_b.is_pressed()</code> fonctionne de la même manière pour le bouton B.</li>
+</ul>
 <h2 id="défi-6-le-labyrinthe">Défi 6: Le labyrinthe</h2>
 <blockquote>
 <p>Le but de ce dernier défi est de créer un labyrinthe que l’on peut parcourir à l’aide d’une “bille” que l’on dirige avec les boutons A et B. (A = vers la gauche, B=vers la droite, A+B = vers le haut)</p>
