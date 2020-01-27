@@ -241,7 +241,7 @@ Les fonctions n’ont pas forcément de paramètre. Par exemple, la fonction <co
 <p><img src="https://docs.google.com/uc?id=1JFzH6CJBEGwXW3QAYFm8C5e7aFfX_3HA" alt=""></p>
 <h3 id="aide">Aide:</h3>
 <ul>
-<li>La fonction: <code>display.set_pixel(&lt;num_colonne&gt;,&lt;num_ligne&gt;,&lt;intentisité&gt;)</code> permet d’allumer la LED de la colonne <code>&lt;num_colonne&gt;</code> (nombre entre 0 et 4) et de la ligne <code>&lt;num_ligne&gt;</code> (nombre entre 0 et 4) avec une intensité <code>&lt;intensité&gt;</code> (nombre entre 0 et 9). <em>Exemple:</em> <code>display.set_pixel(1,2,9)</code> allume la LED située à la colonne 1 de la ligne 2 avec l’intensité 9.</li>
+<li>La fonction: <code>display.set_pixel(x,y,i)</code> permet d’allumer la LED de la colonne <code>x</code> (nombre entre 0 et 4) et de la ligne <code>y</code> (nombre entre 0 et 4) avec une intensité <code>i</code> (nombre entre 0 et 9). <em>Exemple:</em> <code>display.set_pixel(1,2,9)</code> allume la LED située à la colonne 1 de la ligne 2 avec l’intensité 9.</li>
 </ul>
 <h2 id="défi-2-la-pluie">Défi 2: La pluie</h2>
 <h3 id="action-1-1">Action 1</h3>
@@ -251,7 +251,7 @@ Les fonctions n’ont pas forcément de paramètre. Par exemple, la fonction <co
 <p><img src="https://docs.google.com/uc?id=1PMQtjxeqI2HNB02Hz34ctROsy3mehKHc" alt=""></p>
 <h3 id="aide-1">Aide:</h3>
 <ul>
-<li>La fonction <code>sleep(&lt;temps&gt;)</code> met en pause l’exécution pendant <code>&lt;temps&gt;</code> millisecondes. <em>Exemple :</em> <code>sleep(1000)</code> suspend l’exécution pendant 1 seconde.</li>
+<li>La fonction <code>sleep(t)</code> met en pause l’exécution pendant <code>t</code> millisecondes. <em>Exemple :</em> <code>sleep(1000)</code> suspend l’exécution pendant 1 seconde.</li>
 </ul>
 <h3 id="action-2">Action 2</h3>
 <blockquote>
@@ -268,13 +268,13 @@ Les fonctions n’ont pas forcément de paramètre. Par exemple, la fonction <co
 </blockquote>
 <h3 id="aide-2">Aide</h3>
 <ul>
-<li>La fonction <code>randint(&lt;nombre1&gt;,&lt;nombre2&gt;)</code> retourne un nombre entier  aléatoire compris entre les nombres entiers <code>&lt;nombre1&gt;</code> et <code>&lt;nombre2&gt;</code> inclus. Pour pourvoir utiliser cette fonction, il faut ajouter <code>from random import *</code> au début du programme. <em>Exemple:</em> <code>randint(0;10)</code> retourne un nombre aléatoire compris entre 0 et 10.</li>
+<li>La fonction <code>randint(x,y)</code> retourne un nombre entier  aléatoire compris entre les nombres entiers <code>x</code> et <code>y</code> inclus. Pour pourvoir utiliser cette fonction, il faut ajouter <code>from random import *</code> au début du programme. <em>Exemple:</em> <code>randint(0;10)</code> retourne un nombre aléatoire compris entre 0 et 10.</li>
 </ul>
 
 <table>
 <thead>
 <tr>
-<th align="center">Tu as réussi? Bravo!  Tu as gagné ton premier badge!</th>
+<th align="center">Tu as réussi ces deux premiers défis ? Bravo!  Tu as gagné ton premier badge de développeur Python débutant !</th>
 </tr>
 </thead>
 <tbody>
@@ -296,7 +296,7 @@ Les fonctions n’ont pas forcément de paramètre. Par exemple, la fonction <co
 <code>display.show(Image("96009:69090:00900:69090:96009"))</code></p>
 </li>
 <li>
-<p>Une fois que le programme fonctionne, appuyer sur la touche “Reset” à l’arrière de la carte pour le relancer.</p>
+<p>Une fois que le programme fonctionne, appuie sur la touche “Reset” à l’arrière de la carte si tu veux le tester plusieurs fois.</p>
 </li>
 </ul>
 <h2 id="défi-4-la-station-météo">Défi 4: La station météo</h2>
@@ -323,7 +323,7 @@ Les fonctions n’ont pas forcément de paramètre. Par exemple, la fonction <co
 <table>
 <thead>
 <tr>
-<th align="center">Tu as réussi? Bravo!  Tu as gagné ton deuxième badge!</th>
+<th align="center">Tu as réussi ces quatre défis ? Bravo !  Tu as gagné ton deuxième badge de développeur Python confirmé!</th>
 </tr>
 </thead>
 <tbody>
@@ -368,7 +368,7 @@ lig_bille <span class="token operator">=</span> <span class="token number">4</sp
     
     <span class="token comment"># A complèter...</span>
 
-<span class="token comment"># Déplace la bille dans la directeur indiqué par le paramètre    </span>
+<span class="token comment"># Déplace la bille dans la direction indiquée par le paramètre    </span>
 <span class="token keyword">def</span> <span class="token function">deplace_bille</span><span class="token punctuation">(</span>direction<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token comment">#Rend les variables lig_bille et col_bille modifiables depuis la fonction</span>
     <span class="token keyword">global</span> lig_bille<span class="token punctuation">,</span> col_bille 
@@ -409,6 +409,10 @@ display<span class="token punctuation">.</span>set_pixel<span class="token punct
 <blockquote>
 <p>Compléter la fonction <code>deplace_bille(direction)</code> pour qu’elle déplace la bille dans la direction donnée par le paramètre : “H” &gt; vers le haut, “G” &gt; vers la gauche et “D” &gt; vers la droite.</p>
 </blockquote>
+<h3 id="aide-6">Aide:</h3>
+<ul>
+<li>Il est possible de détecter les collisions avec les murs en utilisant la fonction <code>display.get_pixel(x,y)</code> qui retourne un nombre entre 0 et 9 représentant l’intensité lumineuse de la LED située à la colonne <code>x</code> de la ligne <code>y</code>.</li>
+</ul>
 <h3 id="action-3-1">Action 3:</h3>
 <blockquote>
 <p>Amuse toi à modifier le labyrinthe pour le rendre plus complexe.</p>
@@ -417,7 +421,7 @@ display<span class="token punctuation">.</span>set_pixel<span class="token punct
 <table>
 <thead>
 <tr>
-<th align="center">Tu as réussi ? Bravo!  Tu as gagné ton troisième badge!</th>
+<th align="center">Tu as réussi ce dernier défi ? Bravo! Tu as gagné ton troisième badge de développeur Python expert!</th>
 </tr>
 </thead>
 <tbody>
