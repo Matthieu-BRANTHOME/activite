@@ -30,8 +30,9 @@
 <li><a href="#défi-1-le-smiley">Défi 1: Le smiley</a></li>
 <li><a href="#défi-2-la-pluie">Défi 2: La pluie</a></li>
 <li><a href="#défi-3-pierre-feuille-ciseaux">Défi 3: Pierre-feuille-ciseaux</a></li>
-<li><a href="#défi-4-lalarme-incendie">Défi 4: L’alarme incendie</a></li>
-<li><a href="#défi-5-le-labyrinthe">Défi 5: Le labyrinthe</a></li>
+<li><a href="#défi-4-la-station-météo">Défi 4: La station météo</a></li>
+<li><a href="#défi-5-le-clignotant">Défi 5: Le clignotant</a></li>
+<li><a href="#défi-6-le-labyrinthe">Défi 6: Le labyrinthe</a></li>
 </ul>
 </li>
 </ul>
@@ -89,10 +90,10 @@ Tu vas devoir surmonter un maximum de <strong>défis</strong> pour gagner tes <s
 <img src="https://docs.google.com/uc?id=1FmCDiA_lO0n4z3olqaXcAyf3kAsWA-qo" alt=""></p>
 </li>
 <li>
-<p>Les lignes commençant par <code>#</code> ne sont pas prises en compte par l’interpréteur. Elles permettent de faire des <strong>commentaires</strong>, de donner des explications sur le programme pour faciliter sa compréhension par les autres lecteurs.<br>
-<em>Exemple:</em></p>
+<p>Les lignes commençant par <code>#</code> ne sont pas prises en compte par l’interpréteur. Elles permettent de faire des <strong>commentaires</strong>, de donner des explications sur le programme pour faciliter sa compréhension par les autres lecteurs.</p>
 </li>
 </ul>
+<p><em>Exemple:</em></p>
 <pre class=" language-python"><code class="prism  language-python"><span class="token comment">#Cette ligne ne sera pas prise en compte </span>
 </code></pre>
 <ul>
@@ -104,9 +105,10 @@ Tu vas devoir surmonter un maximum de <strong>défis</strong> pour gagner tes <s
 <li>Pour <strong>téléverser</strong> un programme que tu as écrit dans l’éditeur de code <em>TigerJython</em> dans la carte micro:bit, il faut cliquer sur le bouton :<br>
 <img src="https://docs.google.com/uc?id=1qWLaCW9Cz5NcBRQ-jAX9KsgrDCxeqXip" alt=""></li>
 <li>Pour <strong>relancer</strong> un programme chargé dans la carte, il suffit d’appuyer sur le bouton “Reset” à l’arrière de la carte.</li>
-<li>La fonction <code>print()</code> permet d’écrire dans la <strong>console</strong>. C’est une sorte de journal dans lequel l’interpréteur peut écrire pendant l’exécution du programme. Ce journal peut être utile au programmeur pour voir ce qu’il se passe lors de l’exécution. Dans l’éditeur de code <em>TigerJython</em>, le fait de téléverser le programme dans la carte lance automatiquement une fenêtre console “MicroBitManager”.<br>
-<em>Exemple:</em></li>
+<li>La fonction <code>print()</code> permet d’écrire dans la <strong>console</strong>. C’est une sorte de journal dans lequel l’interpréteur peut écrire pendant l’exécution du programme. Ce journal peut être utile au programmeur pour voir ce qu’il se passe lors de l’exécution. Dans l’éditeur de code <em>TigerJython</em>, le fait de téléverser le programme dans la carte lance automatiquement une fenêtre console “MicroBitManager”.</li>
 </ul>
+<p><em>Exemple:</em><br>
+Dans le code:</p>
 <pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Bonjour"</span><span class="token punctuation">)</span>
 </code></pre>
 <p>Dans la console:<br>
@@ -156,7 +158,7 @@ var3 <span class="token operator">=</span> var2<span class="token operator">*</s
 </code></pre>
 <p><em>Remarque :</em></p>
 <ul>
-<li>Le nombre de  “cas” est variable. On peut utiliser  un <code>if</code> seul, le couple <code>if</code>/<code>else</code>  ou autant de <code>elif</code> que l’on souhaite :  <code>if</code>/<code>elif</code>/…/<code>elif</code> avec ou sans <code>else</code> à la fin.</li>
+<li>Le nombre de  “cas” est variable. On peut utiliser:  un <code>if</code> seul, le couple <code>if</code>/<code>else</code> ou un ou plusieurs <code>elif</code> .</li>
 <li>Pour tester une égalité il faut mettre deux égales: <code>==</code></li>
 </ul>
 <h2 id="boucle-bornée">Boucle bornée</h2>
@@ -168,7 +170,7 @@ var3 <span class="token operator">=</span> var2<span class="token operator">*</s
 	<span class="token operator">&lt;</span>bloc_instruction<span class="token operator">&gt;</span>
 </code></pre>
 <p><em>Exemple:</em></p>
-<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">for</span> var1 <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">for</span> var1 <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
 	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Dans la boucle, valeur de var1: "</span><span class="token punctuation">)</span>
 	<span class="token keyword">print</span><span class="token punctuation">(</span>var1<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Plus dans la boucle"</span><span class="token punctuation">)</span>
@@ -177,8 +179,6 @@ var3 <span class="token operator">=</span> var2<span class="token operator">*</s
 <pre><code>&gt;&gt;&gt; Dans la boucle, valeur de var1: 0
 Dans la boucle, valeur de var1: 1
 Dans la boucle, valeur de var1: 2
-Dans la boucle, valeur de var1: 3
-Dans la boucle, valeur de var1: 4
 Plus dans la boucle
 </code></pre>
 <h2 id="boucle-non-bornée">Boucle non bornée</h2>
@@ -220,7 +220,8 @@ Plus dans la boucle
 		<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Rectangle"</span><span class="token punctuation">)</span>
 	<span class="token keyword">else</span> <span class="token punctuation">:</span>
 		<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Non rectangle"</span><span class="token punctuation">)</span>
-<span class="token comment">#On peut ensuite utiliser la fonction plus loin dans le programme:</span>
+<span class="token comment">#On peut ensuite utiliser la fonction plus loin dans le programme en donnant</span>
+<span class="token comment">#des valeurs aux paramètres:</span>
 pythagore<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span> <span class="token comment">#Le triangle ayant pour longueurs 5, 3 et 4 est-il rectangle?</span>
 pythagore<span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token comment">#Le triangle ayant pour longueurs 7, 6 et 5 est-il rectangle?</span>
 </code></pre>
@@ -229,7 +230,7 @@ pythagore<span class="token punctuation">(</span><span class="token number">7</s
 Non rectangle
 </code></pre>
 <p><em>Remarque:</em><br>
-Les fonctions n’ont pas forcément de paramètre, comme par exemple, la fonction <code>print()</code>.</p>
+Les fonctions n’ont pas forcément de paramètre.</p>
 <h1 id="les-défis">Les défis</h1>
 <p>Retrouve ici les défis que tu dois relever:</p>
 <h2 id="défi-1-le-smiley">Défi 1: Le smiley</h2>
@@ -240,7 +241,7 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 <p><img src="https://docs.google.com/uc?id=1JFzH6CJBEGwXW3QAYFm8C5e7aFfX_3HA" alt=""></p>
 <h3 id="aide">Aide:</h3>
 <ul>
-<li>La fonction: <code>display.set_pixel(&lt;num_colonne&gt;,&lt;num_ligne&gt;,&lt;intentisité&gt;)</code> permet d’allumer la LED de la colonne <code>&lt;num_colonne&gt;</code> (nombre entre 0 et 4) et de la ligne <code>&lt;num_ligne&gt;</code> (nombre entre 0 et 4) avec une intensité <code>&lt;intensité&gt;</code> (nombre entre 0 et 9). Par exemple: <code>display.set_pixel(1,2,9)</code> allume la LED située à la colonne 1 de la ligne 2 avec l’intensité 9.</li>
+<li>La fonction: <code>display.set_pixel(&lt;num_colonne&gt;,&lt;num_ligne&gt;,&lt;intentisité&gt;)</code> permet d’allumer la LED de la colonne <code>&lt;num_colonne&gt;</code> (nombre entre 0 et 4) et de la ligne <code>&lt;num_ligne&gt;</code> (nombre entre 0 et 4) avec une intensité <code>&lt;intensité&gt;</code> (nombre entre 0 et 9). <em>Exemple:</em> <code>display.set_pixel(1,2,9)</code> allume la LED située à la colonne 1 de la ligne 2 avec l’intensité 9.</li>
 </ul>
 <h2 id="défi-2-la-pluie">Défi 2: La pluie</h2>
 <h3 id="action-1-1">Action 1</h3>
@@ -250,11 +251,11 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 <p><img src="https://docs.google.com/uc?id=1PMQtjxeqI2HNB02Hz34ctROsy3mehKHc" alt=""></p>
 <h3 id="aide-1">Aide:</h3>
 <ul>
-<li>La fonction <code>sleep(&lt;temps&gt;)</code> met en pause l’exécution pendant <code>&lt;temps&gt;</code> millisecondes. Par exemple, <code>sleep(1000)</code> suspend l’exécution pendant 1 seconde.</li>
+<li>La fonction <code>sleep(&lt;temps&gt;)</code> met en pause l’exécution pendant <code>&lt;temps&gt;</code> millisecondes. <em>Exemple :</em> <code>sleep(1000)</code> suspend l’exécution pendant 1 seconde.</li>
 </ul>
 <h3 id="action-2">Action 2</h3>
 <blockquote>
-<p>Faire tomber quatre gouttes de suite au même endroit.</p>
+<p>Faire tomber quatre gouttes de suite dans la 1ère colonne.</p>
 </blockquote>
 <h3 id="action-3">Action 3</h3>
 <blockquote>
@@ -267,7 +268,7 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 </blockquote>
 <h3 id="aide-2">Aide</h3>
 <ul>
-<li>La fonction <code>randint(&lt;nombre1&gt;,&lt;nombre2&gt;)</code> retourne un nombre entier  aléatoire entre les nombres entiers <code>&lt;nombre1&gt;</code> et <code>&lt;nombre2&gt;</code> inclus. Pour pourvoir utiliser cette fonction, il faut ajouter <code>from random import *</code> au début du programme.</li>
+<li>La fonction <code>randint(&lt;nombre1&gt;,&lt;nombre2&gt;)</code> retourne un nombre entier  aléatoire entre les nombres entiers <code>&lt;nombre1&gt;</code> et <code>&lt;nombre2&gt;</code> inclus. Pour pourvoir utiliser cette fonction, il faut ajouter <code>from random import *</code> au début du programme. <em>Exemple:</em> <code>randint(0;10)</code> retourne un nombre aléatoire en 0 et 10.</li>
 </ul>
 
 <table>
@@ -289,34 +290,29 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 <h3 id="aide-3">Aide</h3>
 <ul>
 <li>Les instructions suivantes permettent d’afficher respectivement une pierre, une feuille ou des ciseaux à l’écran:<br>
-<code>display.show(Image("00900:09990:99599:09990:00900"))</code><br>
+<code>display.show(Image("00000:09990:99999:09990:00000"))</code><br>
 <code>display.show(Image("99900:90090:90009:90009:99999"))</code><br>
 <code>display.show(Image("96009:69090:00900:69090:96009"))</code></li>
 </ul>
-<h2 id="défi-4-lalarme-incendie">Défi 4: L’alarme incendie</h2>
+<h2 id="défi-4-la-station-météo">Défi 4: La station météo</h2>
 <h3 id="action-1-3">Action 1</h3>
 <blockquote>
-<p>Afficher la température de la carte dans la console</p>
+<p>Affiche à l’écran une image selon la luminosité:</p>
+<ul>
+<li>entre 0 et 10 :  image de la nuit</li>
+<li>entre 10 et 150 : un parapluie</li>
+<li>entre 150 et 255 : un soleil</li>
+</ul>
 </blockquote>
 <h3 id="aide-4">Aide</h3>
 <ul>
-<li>La fonction <code>temperature()</code> renvoie la température du processeur de la carte sous la forme d’un nombre entier. Cela permet d’obtenir une approximation de la température ambiante de la pièce.</li>
-</ul>
-<h3 id="action-2-1">Action 2</h3>
-<blockquote>
-<p>Afficher une “coche” si la température est inférieure à 34°C et une “tête de mort” si la température est supérieure ou égale à 34°C</p>
-</blockquote>
-<h3 id="aide-5">Aide</h3>
-<ul>
-<li>Les instructions <code>display.show(Image.YES)</code> et <code>display.show(Image.SKULL)</code>  permettent d’afficher à l’écran, respectivement une coche et une tête de mort.</li>
-</ul>
-<blockquote>
-<p>Programme une alarme incendie. Cette alarme doit afficher une coche lorsque la température reste inférieure à 34°C et une tête de mort en cas de dépassement.</p>
-</blockquote>
-<p><img src="https://docs.google.com/uc?id=1dSA887hnF6EBEUfgh2J3iEGDwyWwoC2n" alt=""></p>
-<ul>
-<li>Tu peux utiliser la fonction <code>print()</code> pour tracer la température, au fur et à mesure de l’exécution, dans la console.</li>
-<li>Pour tester ton programme, tu peux laisser ton doigt sur le processeur de la carte (à l’arrière) pour faire monter la température.</li>
+<li>La fonction <code>display.read_light_level()</code> renvoie la luminosité qui arrive sur l’écran sous la forme d’un nombre entier entre 0 et 255 .</li>
+<li>Les instruction suivantes permettent d’afficher respectivement la nuit, un parapluie et un soleil à l’écran:<br>
+<code>display.show(Image("40404:04040:40404:04040:40404"))</code><br>
+<code>display.show(Image("06660:66666:00600:60600:06600"))</code><br>
+<code>display.show(Image("60606:08880:68986:08880:60606"))</code></li>
+<li>L’instruction <code>while True :</code> permet de créer une boucle infinie</li>
+<li>Tu peux utiliser la fonction <code>print()</code> pour afficher la luminosité, au fur et à mesure de l’exécution, dans la console.</li>
 </ul>
 
 <table>
@@ -333,7 +329,8 @@ Les fonctions n’ont pas forcément de paramètre, comme par exemple, la foncti
 <td align="center"></td>
 </tr>
 </tbody>
-</table><h2 id="défi-5-le-labyrinthe">Défi 5: Le labyrinthe</h2>
+</table><h2 id="défi-5-le-clignotant">Défi 5: Le clignotant</h2>
+<h2 id="défi-6-le-labyrinthe">Défi 6: Le labyrinthe</h2>
 <blockquote>
 <p>Le but de ce dernier défi est de créer un labyrinthe que l’on peut parcourir à l’aide d’une “bille” que l’on dirige avec les boutons A et B. (A = vers la gauche, B=vers la droite, A+B = vers le haut)</p>
 </blockquote>
@@ -392,7 +389,7 @@ display<span class="token punctuation">.</span>set_pixel<span class="token punct
 <blockquote>
 <p>Compléter  la fonction <code>dessine_mur()</code> qui dessine les “murs” du labyrinthe puis tester le programme.</p>
 </blockquote>
-<h3 id="action-2-2">Action 2:</h3>
+<h3 id="action-2-1">Action 2:</h3>
 <blockquote>
 <p>Compléter la fonction <code>deplace_bille(direction)</code> pour qu’elle déplace la bille dans la direction donnée par le paramètre : “H” &gt; vers le haut, “G” &gt; vers la gauche et “D” &gt; vers la droite.</p>
 </blockquote>
