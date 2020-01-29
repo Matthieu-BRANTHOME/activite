@@ -264,7 +264,7 @@ Les fonctions n’ont pas forcément de paramètre. Par exemple, la fonction <co
 <p><img src="https://docs.google.com/uc?id=1sd9iSLvcfMjnvoPvUf8IbHksd2vVFtX4" alt=""></p>
 <h3 id="action-4">Action 4</h3>
 <blockquote>
-<p>Faire tomber la pluie dix fois dans des colonnes choisies aléatoirement.</p>
+<p>Faire tomber dix fois une goutte de pluie dans des colonnes choisies aléatoirement.</p>
 </blockquote>
 <h3 id="aide-2">Aide</h3>
 <ul>
@@ -304,20 +304,28 @@ Les fonctions n’ont pas forcément de paramètre. Par exemple, la fonction <co
 <blockquote>
 <p>Afficher à l’écran une image différente selon la luminosité ambiante:</p>
 <ul>
-<li>entre 0 et 10 :  image de la nuit</li>
-<li>entre 10 et 150 : un parapluie</li>
+<li>entre 0 et 10  inclus :  nuit étoilée</li>
+<li>entre 10 et 150  inclus : un parapluie</li>
 <li>entre 150 et 255 : un soleil</li>
 </ul>
 </blockquote>
 <h3 id="aide-4">Aide</h3>
 <ul>
-<li>La fonction <code>display.read_light_level()</code> renvoie la luminosité qui arrive sur l’écran sous la forme d’un nombre entier entre 0 et 255 .</li>
-<li>Les instructions suivantes permettent d’afficher respectivement une image de la nuit, un parapluie et un soleil à l’écran:<br>
+<li>
+<p>L’instruction <code>while True :</code> permet de créer une boucle infinie</p>
+</li>
+<li>
+<p>La fonction <code>display.read_light_level()</code> renvoie la luminosité qui arrive sur l’écran sous la forme d’un nombre entier entre 0 et 255 . Il faut suspendre l’exécution pendant 1 seconde (<code>sleep(1000)</code>) après l’appel de la fonction pour laisser le temps à la carte de répondre.</p>
+</li>
+<li>
+<p>Les instructions suivantes permettent d’afficher respectivement une image de nuit étoilée, un parapluie et un soleil à l’écran:<br>
 <code>display.show(Image("40404:04040:40404:04040:40404"))</code><br>
 <code>display.show(Image("06660:66666:00600:60600:06600"))</code><br>
-<code>display.show(Image("60606:08880:68986:08880:60606"))</code></li>
-<li>L’instruction <code>while True :</code> permet de créer une boucle infinie</li>
-<li>Tu peux utiliser la fonction <code>print()</code> pour afficher la luminosité, au fur et à mesure de l’exécution, dans la console.</li>
+<code>display.show(Image("60606:08880:68986:08880:60606"))</code></p>
+</li>
+<li>
+<p>Tu peux utiliser la fonction <code>print()</code> pour afficher la luminosité, au fur et à mesure de l’exécution, dans la console.</p>
+</li>
 </ul>
 
 <table>
