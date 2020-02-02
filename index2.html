@@ -74,6 +74,7 @@ Tu vas devoir surmonter un maximum de <strong>défis</strong> pour gagner tes <s
 <li>d’un <strong>guide de démarrage</strong>, te permettant de prendre en main l’environnement</li>
 <li>d’un <strong>mémo</strong> récapitulant les <strong>principales fonctionnalités</strong>  du langage Python</li>
 <li>d’une <strong>liste de défis</strong> à relever</li>
+<li>le <strong>menu</strong> à gauche te permet de naviguer facilement de l’un à l’autre</li>
 </ul>
 <p>A toi de jouer! Bonne chance!</p>
 <h1 id="guide-de-démarrage">Guide de démarrage</h1>
@@ -86,7 +87,7 @@ Tu vas devoir surmonter un maximum de <strong>défis</strong> pour gagner tes <s
 <p>Le texte ne doit comporter <strong>aucune erreur</strong>, sinon l’interpréteur signale un problème dans la console (voir plus loin) et l’exécution s’arrête. L’éditeur <em>TigerJython</em> peut aussi te signaler certaines erreurs à l’avance.</p>
 </li>
 <li>
-<p>L’<strong>indentation</strong> du texte est importante, le programme doit être structuré par des <strong>décalages du texte</strong>. Ces décalages s’effectuent avec la touche tabulation du clavier:<br>
+<p>L’<strong>indentation</strong> du texte est importante, cela signifie que le programme doit être structuré par des <strong>décalages de texte</strong> propres à certaines instructions. Ces décalages s’effectuent avec la touche tabulation du clavier:<br>
 <img src="https://docs.google.com/uc?id=1FmCDiA_lO0n4z3olqaXcAyf3kAsWA-qo" alt=""></p>
 </li>
 <li>
@@ -102,7 +103,7 @@ Tu vas devoir surmonter un maximum de <strong>défis</strong> pour gagner tes <s
 <pre class=" language-python"><code class="prism  language-python"><span class="token keyword">from</span> microbit <span class="token keyword">import</span> <span class="token operator">*</span>
 </code></pre>
 <ul>
-<li>Pour <strong>téléverser</strong> un programme que tu as écrit dans l’éditeur de code <em>TigerJython</em> dans la carte micro:bit, il faut cliquer sur le bouton :<br>
+<li>Pour <strong>téléverser</strong> un programme que tu as écrit dans l’éditeur de code <em>TigerJython</em> vers la carte micro:bit, il suffit de cliquer sur le bouton :<br>
 <img src="https://docs.google.com/uc?id=1qWLaCW9Cz5NcBRQ-jAX9KsgrDCxeqXip" alt=""></li>
 <li>Pour <strong>relancer</strong> un programme chargé dans la carte, il suffit d’appuyer sur le bouton “Reset” à l’arrière de la carte.</li>
 <li>La fonction <code>print()</code> permet d’écrire dans la <strong>console</strong>. C’est une sorte de journal dans lequel l’interpréteur peut écrire pendant l’exécution du programme. Ce journal peut être utile au programmeur pour voir ce qu’il se passe lors de l’exécution. Dans l’éditeur de code <em>TigerJython</em>, le fait de téléverser le programme dans la carte lance automatiquement une fenêtre console “MicroBitManager”.</li>
@@ -124,7 +125,7 @@ var1 <span class="token operator">=</span> <span class="token number">2</span>
 var2 <span class="token operator">=</span> <span class="token number">3</span>
 <span class="token comment">#Ajoute 1 à la variable var2</span>
 var2 <span class="token operator">=</span> var2 <span class="token operator">+</span><span class="token number">1</span>
-<span class="token comment">#Calcul un produit puis l'affecte à la variable var3</span>
+<span class="token comment">#Calcule un produit puis l'affecte à la variable var3</span>
 var3 <span class="token operator">=</span> var2<span class="token operator">*</span>var1
 <span class="token comment">#Ecrit dans la console la valeur de la variable var3</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>var3<span class="token punctuation">)</span>
@@ -159,7 +160,7 @@ var3 <span class="token operator">=</span> var2<span class="token operator">*</s
 <p><em>Remarques :</em></p>
 <ul>
 <li>Le nombre de  “cas” est variable. On peut utiliser:  un <code>if</code> seul, le couple <code>if</code>/<code>else</code> seul ou accompagné d’un ou plusieurs <code>elif</code> .</li>
-<li>Pour tester une égalité il faut mettre deux égales: <code>==</code></li>
+<li>Pour tester une égalité il faut mettre deux signes “égale” : <code>==</code></li>
 </ul>
 <h2 id="boucle-bornée">Boucle bornée</h2>
 <p>Répète un bloc d’instruction un certain nombre de fois.</p>
@@ -211,8 +212,8 @@ Plus dans la boucle
 </code></pre>
 <p><em>Exemple:</em></p>
 <pre class=" language-python"><code class="prism  language-python"><span class="token comment">#La définition de la fonction se fait avant son utilisation.</span>
-<span class="token comment">#Ici, on définit une fonction qui calcule si un triangle est rectangle</span>
-<span class="token comment">#connaissant la longueur de ses côtés:</span>
+<span class="token comment">#Ici, on définit une fonction qui calcule si un triangle est rectangle,</span>
+<span class="token comment">#elle prend trois paramètres en entrée (a,b et c) correspondants aux longueurs des côtés (a étant le plus grand):</span>
 <span class="token keyword">def</span> <span class="token function">pythagore</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">)</span><span class="token punctuation">:</span>
 	var1<span class="token operator">=</span>a<span class="token operator">*</span>a
 	var2<span class="token operator">=</span>b<span class="token operator">*</span>b<span class="token operator">+</span>c<span class="token operator">*</span>c
