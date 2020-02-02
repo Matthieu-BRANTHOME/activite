@@ -30,8 +30,8 @@
 <li><a href="#défi-1-le-smiley">Défi 1: Le smiley</a></li>
 <li><a href="#défi-2-la-pluie">Défi 2: La pluie</a></li>
 <li><a href="#défi-3-pierre-feuille-ciseaux">Défi 3: Pierre-feuille-ciseaux</a></li>
-<li><a href="#défi-4-la-station-météo">Défi 4: La station météo</a></li>
-<li><a href="#défi-5-les-clignotants">Défi 5: Les clignotants</a></li>
+<li><a href="#défi-4-jeu-de-rapidité">Défi 4: Jeu de rapidité</a></li>
+<li><a href="#défi-5-la-station-météo">Défi 5: La station météo</a></li>
 <li><a href="#défi-6-le-labyrinthe">Défi 6: Le labyrinthe</a></li>
 </ul>
 </li>
@@ -301,33 +301,17 @@ Les fonctions n’ont pas forcément de paramètre. Par exemple, la fonction <co
 <p>Une fois que le programme fonctionne, appuie sur la touche “Reset” à l’arrière de la carte si tu veux le tester plusieurs fois. Tu peux essayer de jouer contre la carte!</p>
 </li>
 </ul>
-<h2 id="défi-4-la-station-météo">Défi 4: La station météo</h2>
-<h3 id="action-1-3">Action 1</h3>
+<h2 id="défi-4-jeu-de-rapidité">Défi 4: Jeu de rapidité</h2>
+<h3 id="action-1-3">Action 1:</h3>
 <blockquote>
-<p>Afficher à l’écran une image différente selon la luminosité ambiante:</p>
-<ul>
-<li>entre 0 et 10  inclus :  nuit étoilée</li>
-<li>entre 10 et 150  inclus : un parapluie</li>
-<li>entre 150 et 255 : un soleil</li>
-</ul>
+<p>Le but du jeu est de réussir à appuyer plus de 30 fois sur le bouton A en 5 secondes à partir de l’affichage à l’écran du “Go!”. Tant que ce nombre n’est pas atteint, le jeu recommence, le score précédent étant affiché à l’écran. Si le joueur arrive à 30, on affiche à l’écran “Gagné!”.<br>
+<img src="https://docs.google.com/uc?id=1UD-Q6tsIZbzuo0TeDuAZc64obtfTsoVc" alt=""></p>
 </blockquote>
-<h3 id="aide-4">Aide</h3>
+<h3 id="aide-4">Aide:</h3>
 <ul>
-<li>
-<p>L’instruction <code>while True :</code> permet de créer une boucle infinie</p>
-</li>
-<li>
-<p>La fonction <code>display.read_light_level()</code> renvoie la luminosité qui arrive sur l’écran sous la forme d’un nombre entier entre 0 et 255 . Il faut suspendre l’exécution pendant 1 seconde (<code>sleep(1000)</code>) après l’appel de la fonction pour laisser le temps à la carte de répondre.</p>
-</li>
-<li>
-<p>Les instructions suivantes permettent d’afficher respectivement une image de nuit étoilée, un parapluie et un soleil à l’écran:<br>
-<code>display.show(Image("40404:04040:40404:04040:40404"))</code><br>
-<code>display.show(Image("06660:66666:00600:60600:06600"))</code><br>
-<code>display.show(Image("60606:08880:68986:08880:60606"))</code></p>
-</li>
-<li>
-<p>Tu peux utiliser la fonction <code>print()</code> pour afficher la luminosité dans la console au fur et à mesure de l’exécution.</p>
-</li>
+<li>La fonction <code>display.scroll(texte)</code> permet d’afficher une texte ou la valeur d’une variable à l’écran de la carte. Par exemple: <code>display.scroll("Bonjour")</code> ou <code>var1=4</code>puis <code>display.scroll(var1)</code></li>
+<li>La fonction  <code>button_a.get_presses()</code> renvoie le nombre d’appuis sur le bouton A effectué depuis le dernier appel de la fonction. Chaque appel remet donc le compteur à zéro.</li>
+<li>Penser  à la fonction <code>sleep(t)</code> pour attendre les cinq secondes.</li>
 </ul>
 
 <table>
@@ -344,15 +328,33 @@ Les fonctions n’ont pas forcément de paramètre. Par exemple, la fonction <co
 <td align="center"></td>
 </tr>
 </tbody>
-</table><h2 id="défi-5-les-clignotants">Défi 5: Les clignotants</h2>
-<h3 id="action-1-4">Action 1:</h3>
+</table><h2 id="défi-5-la-station-météo">Défi 5: La station météo</h2>
+<h3 id="action-1-4">Action 1</h3>
 <blockquote>
-<p>Afficher un clignotant à gauche tant que le bouton A est appuyé. Afficher un clignotant à droite tant que le bouton B est appuyé.</p>
-</blockquote>
-<p><img src="https://docs.google.com/uc?id=1v71SL-dLVHLXnPeVJx6Rh7ADHiFJoe4O" alt=""></p>
-<h3 id="aide-5">Aide:</h3>
+<p>Afficher à l’écran une image différente selon la luminosité ambiante:</p>
 <ul>
-<li>La fonction <code>button_a.is_pressed()</code> retourne <code>True</code> (vrai) lorsque le bouton A est appuyé. La fonction <code>button_b.is_pressed()</code> fonctionne de la même manière pour le bouton B.</li>
+<li>entre 0 et 10  inclus :  nuit étoilée</li>
+<li>entre 10 et 150  inclus : un parapluie</li>
+<li>entre 150 et 255 : un soleil</li>
+</ul>
+</blockquote>
+<h3 id="aide-5">Aide</h3>
+<ul>
+<li>
+<p>L’instruction <code>while True :</code> permet de créer une boucle infinie</p>
+</li>
+<li>
+<p>La fonction <code>display.read_light_level()</code> renvoie la luminosité qui arrive sur l’écran sous la forme d’un nombre entier entre 0 et 255 . Il faut suspendre l’exécution pendant 1 seconde (<code>sleep(1000)</code>) après l’appel de la fonction pour laisser le temps à la carte de répondre.</p>
+</li>
+<li>
+<p>Les instructions suivantes permettent d’afficher respectivement une image de nuit étoilée, un parapluie et un soleil à l’écran:<br>
+<code>display.show(Image("40404:04040:40404:04040:40404"))</code><br>
+<code>display.show(Image("06660:66666:00600:60600:06600"))</code><br>
+<code>display.show(Image("60606:08880:68986:08880:60606"))</code></p>
+</li>
+<li>
+<p>Tu peux utiliser la fonction <code>print()</code> pour afficher la luminosité dans la console au fur et à mesure de l’exécution.</p>
+</li>
 </ul>
 <h2 id="défi-6-le-labyrinthe">Défi 6: Le labyrinthe</h2>
 <blockquote>
