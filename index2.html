@@ -84,10 +84,10 @@ Tu vas devoir surmonter un maximum de <strong>défis</strong> pour gagner tes <s
 <p>Un <strong>programme  Python</strong> est un texte qui permet de “commander” un ordinateur (la carte micro:bit est un petit ordinateur). Ce texte est composé d’une suite d’<strong>instructions</strong> (une par ligne). Dans notre cas, ce programme est <strong>exécuté</strong> par un <strong>interpréteur</strong> situé dans la carte.</p>
 </li>
 <li>
-<p>Le texte ne doit comporter <strong>aucune erreur</strong>, sinon l’interpréteur signale un problème dans la console (voir plus loin) et l’exécution s’arrête. L’éditeur <em>TigerJython</em> peut aussi te signaler certaines erreurs à l’avance.</p>
+<p>Le texte ne doit comporter <strong>aucune erreur</strong>, sinon l’interpréteur signale un problème dans la console (voir plus loin) et lors de l’exécution et s’arrête. L’éditeur <em>TigerJython</em> peut aussi te signaler certaines erreurs à l’avance, avant l’exécution.</p>
 </li>
 <li>
-<p>L’<strong>indentation</strong> du texte est importante, cela signifie que le programme doit être structuré par des <strong>décalages de texte</strong> propres à certaines instructions. Ces décalages s’effectuent avec la touche tabulation du clavier:<br>
+<p>L’<strong>indentation</strong> du texte est importante, cela signifie que le programme doit être structuré par des <strong>décalages de texte</strong> lors de l’utilisation de certaines instructions (<code>if</code>, <code>while</code>, <code>for</code>, etc. ). Une mauvaise indentation empêche l’exécution du programme.  Ces décalages s’effectuent avec la touche tabulation du clavier:<br>
 <img src="https://docs.google.com/uc?id=1FmCDiA_lO0n4z3olqaXcAyf3kAsWA-qo" alt=""></p>
 </li>
 <li>
@@ -298,7 +298,7 @@ Les fonctions n’ont pas forcément de paramètre. Par exemple, la fonction <co
 <code>display.show(Image("96009:69090:00900:69090:96009"))</code></p>
 </li>
 <li>
-<p>Une fois que le programme fonctionne, appuie sur la touche “Reset” à l’arrière de la carte si tu veux le tester plusieurs fois.</p>
+<p>Une fois que le programme fonctionne, appuie sur la touche “Reset” à l’arrière de la carte si tu veux le tester plusieurs fois. Tu peux essayer de jouer contre la carte!</p>
 </li>
 </ul>
 <h2 id="défi-4-la-station-météo">Défi 4: La station météo</h2>
@@ -326,7 +326,7 @@ Les fonctions n’ont pas forcément de paramètre. Par exemple, la fonction <co
 <code>display.show(Image("60606:08880:68986:08880:60606"))</code></p>
 </li>
 <li>
-<p>Tu peux utiliser la fonction <code>print()</code> pour afficher la luminosité, au fur et à mesure de l’exécution, dans la console.</p>
+<p>Tu peux utiliser la fonction <code>print()</code> pour afficher la luminosité dans la console au fur et à mesure de l’exécution.</p>
 </li>
 </ul>
 
@@ -347,7 +347,7 @@ Les fonctions n’ont pas forcément de paramètre. Par exemple, la fonction <co
 </table><h2 id="défi-5-les-clignotants">Défi 5: Les clignotants</h2>
 <h3 id="action-1-4">Action 1:</h3>
 <blockquote>
-<p>Afficher un clignotant à gauche tant que le bouton A est appuyée. Afficher un clignotant à droite tant que le bouton B est appuyée.</p>
+<p>Afficher un clignotant à gauche tant que le bouton A est appuyé. Afficher un clignotant à droite tant que le bouton B est appuyé.</p>
 </blockquote>
 <p><img src="https://docs.google.com/uc?id=1v71SL-dLVHLXnPeVJx6Rh7ADHiFJoe4O" alt=""></p>
 <h3 id="aide-5">Aide:</h3>
@@ -361,7 +361,8 @@ Les fonctions n’ont pas forcément de paramètre. Par exemple, la fonction <co
 <p><img src="https://docs.google.com/uc?id=1UWhlDp7BxK5ZdnQilL9H_fgIB1FXixm5" alt=""></p>
 <p>Le programme étant plus complexe, nous allons le découper en utilisant des fonctions.<br>
 Le squelette du programme est le suivant, tu peux le copier-coller dans ton éditeur de code <em>TigerJython</em></p>
-<pre class=" language-python"><code class="prism  language-python"><span class="token comment">#################</span>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">from</span> microbit <span class="token keyword">import</span> <span class="token operator">*</span>
+<span class="token comment">#################</span>
 <span class="token comment">### Variables ###</span>
 <span class="token comment">#################    </span>
 <span class="token comment">#Conserve en mémoire la position (colone et ligne) de la bille </span>
